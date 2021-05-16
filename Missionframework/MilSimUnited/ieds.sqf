@@ -1,3 +1,7 @@
+_civRep = KP_liberation_civ_rep;
+
+if (_civRep > -25) exitWith {};
+
 _allIED = allMines;
 _allJunk = allMissionObjects "Land_Garbage_square5_F";
 
@@ -31,7 +35,7 @@ _allJunk = allMissionObjects "Land_Garbage_square5_F";
 	}
 } foreach _allJunk;
 
-maxMines = 8;
+maxMines = 4;
 _headlessClients = entities "HeadlessClient_F";
 _humanPlayers = allPlayers - _headlessClients;
 _humanPlayers call BIS_fnc_arrayShuffle;
@@ -109,7 +113,7 @@ _firstRound = 1;
 		};
 	} foreach _allJunk;
 	
-	if(_countJunk < 60 && _junkNearPlayer < 6) then {
+	if(_countJunk < 30 && _junkNearPlayer < 4) then {
 		for "_i" from 1 to 2 do {
 		_nearPlayer = _x nearRoads 2000;
 		_count = count _nearPlayer;
