@@ -222,18 +222,6 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	_vehicle addAction	["Endheilen",{ params ["_target", "_caller", "_actionId", "_arguments"]; [_caller,true] execVM "MilSimUnited\heal.sqf";},nil,1.5,false,true,"","true",5,false,"",""];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-["Land_MapBoard_Enoch_F", "InitPost", {
-    params ["_vehicle"];
-	_vehicle setObjectTextureGlobal [0, "MilSimUnited\rules_ger_1.jpg"];
-	_veh = createVehicle ["MapBoard_Malden_F", [getPos _vehicle select 0,(getPos _vehicle select 1)+2,getPos _vehicle select 2], [], 0, "CAN_COLLIDE"];
-	_dir = getDir _vehicle;
-	_veh attachTo [_vehicle, [2, 0, 0]];
-	_veh setDir _dir;
-	_veh setObjectTextureGlobal [0, "MilSimUnited\rules_en_1.jpg"];
-	
-	_veh enableSimulationGlobal false;
-	_vehicle enableSimulationGlobal false;
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 // Advanced Singloading
 ASL_SLING_RULES_OVERRIDE = [ 
