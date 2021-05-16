@@ -1,5 +1,7 @@
 params ["_sector", "_count"];
 
+if (true) exitWith {}; //MilSim United -> Custom IED-Script
+
 if (_count <= 0) exitWith {};
 
 if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf for %1 spawned on: %2", markerText _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
