@@ -335,9 +335,36 @@ while { true } do {
                     _vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
                     { _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; } foreach (crew _vehicle);
                 };
+				
+				if(buildtype == 99) then {
+					_rulePosGer = _vehicle modelToWorld [-6,0,0];
+					_rulePosEng = _vehicle modelToWorld [-6,2,0];
+					
+					_dirFoB = getDir _vehicle;
+					_dirBords = _dirFoB + 90;
+
+					_rulesGer = createVehicle ["Land_MapBoard_F", [_rulePosGer select 0,_rulePosGer select 1,0], [], 0, "CAN_COLLIDE"];
+					_rulesGer setObjectTextureGlobal [0, "MilSimUnited\rules_ger_1.jpg"];
+					_rulesGer enableSimulationGlobal false;
+					_rulesGer setDir _dirBords;
+					_rulesEng = createVehicle ["Land_MapBoard_F", [_rulePosEng select 0,_rulePosEng select 1,0], [], 0, "CAN_COLLIDE"];
+					_rulesEng setObjectTextureGlobal [0, "MilSimUnited\rules_en_1.jpg"];
+					_rulesEng enableSimulationGlobal false;
+					_rulesEng setDir _dirBords;
+					
+					_dirLamps = _dirBords - 90;
+					_lampPosGer = _rulesGer modelToWorld [0,-0.15,0.95];
+					_lampGer = createVehicle ["Land_TentLamp_01_suspended_F", _lampPosGer, [], 0, "CAN_COLLIDE"];
+					_lampGer setDir _dirLamps;
+					_lampGer setLightIntensity 0.5;
+					_lampPosEng = _rulesEng modelToWorld [0,-0.15,0.95];
+					_lampEng = createVehicle ["Land_TentLamp_01_suspended_F", _lampPosEng, [], 0, "CAN_COLLIDE"];
+					_lampEng setDir _dirLamps;
+					_lampEng setLightIntensity 0.5;
+				};
             };
 				
-			//Mil Sim edit, log players action
+			//MilSim edit, log players action
 			_playerActions = profileNamespace getVariable ["KV13_LogPlayerActions", []];
 			if(count _playerActions > 40) then {
 				reverse _playerActions;
