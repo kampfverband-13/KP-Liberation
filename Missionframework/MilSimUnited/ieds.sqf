@@ -1,7 +1,3 @@
-_civRep = KP_liberation_civ_rep;
-
-if (_civRep > -25) exitWith {};
-
 _allIED = allMines;
 _allJunk = allMissionObjects "Land_Garbage_square5_F";
 
@@ -35,12 +31,60 @@ _allJunk = allMissionObjects "Land_Garbage_square5_F";
 	}
 } foreach _allJunk;
 
-maxMines = 4;
 _headlessClients = entities "HeadlessClient_F";
 _humanPlayers = allPlayers - _headlessClients;
 _humanPlayers call BIS_fnc_arrayShuffle;
 
-_firstRound = 1;
+{
+	_junkClassname = "Land_Garbage_square5_F";
+	_allJunk = allMissionObjects _junkClassname;
+	_countJunk = count _allJunk;
+		
+	_junkNearPlayer = 0;
+	_player = _x;
+	{
+		if(isTouchingGround _player) then {
+			_distance = _x distance _player;
+			if(_distance < 2000) then {
+			_junkNearPlayer = _junkNearPlayer + 1;
+			};
+		};
+	} foreach _allJunk;
+	
+	if(_countJunk < 20 && _junkNearPlayer < 4) then {
+		for "_i" from 1 to 2 do {
+		_nearPlayer = _x nearRoads 2000;
+		_count = count _nearPlayer;
+		_rand = random _count;
+		_rand = round _rand;
+		_streetObject = _nearPlayer select _rand;
+		_pos = getPos _streetObject;
+		
+		_checkPlayers = _streetObject nearEntities 500;
+		_playerNear = 0;
+		{
+			if(side _x == west) then {
+				_playerNear = 1;
+			}
+		} foreach _checkPlayers;
+		
+		if(_playerNear == 0) then {
+			_randSpawnPos = _pos getPos [6 * sqrt random 1, random 360];
+			
+			_spawnJunk = createVehicle [_junkClassname, _randSpawnPos, [], 0, "CAN_COLLIDE"];
+				{
+					_x addCuratorEditableObjects [[_spawnJunk], true];
+				} foreach allCurators;
+			};
+		};
+	};
+} foreach _humanPlayers;
+
+
+_civRep = KP_liberation_civ_rep;
+if (_civRep > -25) exitWith {};
+
+maxMines = 3;
 {
 	_allIED = allMines;
 	_countMines = count _allIED;
@@ -92,51 +136,6 @@ _firstRound = 1;
 			_randJunk = [1,2] call BIS_fnc_randomInt;
 			if(_randJunk == 1) then {
 				_spawnJunk = createVehicle ["Land_Garbage_square5_F", _randSpawnPos, [], 0, "CAN_COLLIDE"];
-			};
-		};
-	};
-} foreach _humanPlayers;
-
-{
-	_junkClassname = "Land_Garbage_square5_F";
-	_allJunk = allMissionObjects _junkClassname;
-	_countJunk = count _allJunk;
-		
-	_junkNearPlayer = 0;
-	_player = _x;
-	{
-		if(isTouchingGround _player) then {
-			_distance = _x distance _player;
-			if(_distance < 2000) then {
-			_junkNearPlayer = _junkNearPlayer + 1;
-			};
-		};
-	} foreach _allJunk;
-	
-	if(_countJunk < 30 && _junkNearPlayer < 4) then {
-		for "_i" from 1 to 2 do {
-		_nearPlayer = _x nearRoads 2000;
-		_count = count _nearPlayer;
-		_rand = random _count;
-		_rand = round _rand;
-		_streetObject = _nearPlayer select _rand;
-		_pos = getPos _streetObject;
-		
-		_checkPlayers = _streetObject nearEntities 500;
-		_playerNear = 0;
-		{
-			if(side _x == west) then {
-				_playerNear = 1;
-			}
-		} foreach _checkPlayers;
-		
-		if(_playerNear == 0) then {
-			_randSpawnPos = _pos getPos [6 * sqrt random 1, random 360];
-			
-			_spawnJunk = createVehicle [_junkClassname, _randSpawnPos, [], 0, "CAN_COLLIDE"];
-				{
-					_x addCuratorEditableObjects [[_spawnJunk], true];
-				} foreach allCurators;
 			};
 		};
 	};

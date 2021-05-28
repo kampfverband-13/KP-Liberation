@@ -199,7 +199,15 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     params ["_vehicle"];
 	_vehicle setObjectTextureGlobal [0,"A3\armor_f_tank\lt_01\data\lt_01_main_olive_co.paa"];
 	_vehicle setObjectTextureGlobal [1,"A3\armor_f_tank\lt_01\data\lt_01_cannon_olive_co.paa"];
-	_vehicle setObjectTextureGlobal [2,"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"];
+	_vehicle setObjectTextureGlobal [2,"A3\Armor_F\Data\camonet_aaf_digi_green_co.paa"];
+	_vehicle setObjectTextureGlobal [3,"A3\armor_f\data\cage_olive_co.paa"];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["I_LT_01_AT_F", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"A3\armor_f_tank\lt_01\data\lt_01_main_olive_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"A3\armor_f_tank\lt_01\data\lt_01_at_olive_co.paa"];
+	_vehicle setObjectTextureGlobal [2,"A3\Armor_F\Data\camonet_aaf_digi_green_co.paa"];
 	_vehicle setObjectTextureGlobal [3,"A3\armor_f\data\cage_olive_co.paa"];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -207,7 +215,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     params ["_vehicle"];
 	_vehicle setObjectTextureGlobal [0,"A3\armor_f_tank\lt_01\data\lt_01_main_olive_co.paa"];
 	_vehicle setObjectTextureGlobal [1,"A3\armor_f_tank\lt_01\data\lt_01_at_olive_co.paa"];
-	_vehicle setObjectTextureGlobal [2,"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"];
+	_vehicle setObjectTextureGlobal [2,"A3\Armor_F\Data\camonet_aaf_digi_green_co.paa"];
 	_vehicle setObjectTextureGlobal [3,"A3\armor_f\data\cage_olive_co.paa"];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -220,6 +228,59 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     params ["_vehicle"];
 	clearItemCargoGlobal _vehicle;
 	_vehicle addAction	["Endheilen",{ params ["_target", "_caller", "_actionId", "_arguments"]; [_caller,true] execVM "MilSimUnited\heal.sqf";},nil,1.5,false,true,"","true",5,false,"",""];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["LOP_SLA_BTR60", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\btr60_body_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\btr60_details_cdf_co.paa"];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["LOP_SLA_BTR70", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\btr70_cdf_1_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\btr70_cdf_2_co.paa"];
+	_vehicle setObjectTextureGlobal [3,"rhsafrf\addons\rhs_btr70\habar\data\sa_gear_02_co.paa"];
+	_vehicle setObjectTextureGlobal [4,"rhsafrf\addons\rhs_btr70\habar\data\sa_gear_02_co.paa"];
+	_vehicle setObjectTextureGlobal [19,"rhsafrf\addons\rhs_decals\data\numbers\cdf\8_ca.paa"];
+	_vehicle setObjectTextureGlobal [20,"rhsafrf\addons\rhs_decals\data\numbers\cdf\5_ca.paa"];
+	_vehicle setObjectTextureGlobal [21,"rhsafrf\addons\rhs_decals\data\numbers\cdf\3_ca.paa"];
+	_vehicle setObjectTextureGlobal [22,"rhsafrf\addons\rhs_decals\data\numbers\cdf\5_ca.paa"];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["LOP_SLA_BMP1D", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_1_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_2_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [2,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_3_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [3,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_4_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [4,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_5_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [5,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_6_cdf_co.paa"];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["LOP_SLA_BMP2D", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_1_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_2_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [2,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_3_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [3,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_4_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [4,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_5_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [5,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\bmp_6_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [6,"rhsafrf\addons\rhs_decals\data\numbers\cdf\4_ca.paa"];
+	_vehicle setObjectTextureGlobal [7,"rhsafrf\addons\rhs_decals\data\numbers\cdf\8_ca.paa"];
+	_vehicle setObjectTextureGlobal [8,"rhsafrf\addons\rhs_decals\data\numbers\cdf\8_ca.paa"];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["LOP_SLA_T72BA", "InitPost", {
+    params ["_vehicle"];
+	_vehicle setObjectTextureGlobal [0,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\rhs_t72b_01_co.paa"];
+	_vehicle setObjectTextureGlobal [1,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\rhs_t72b_02_co.paa"];
+	_vehicle setObjectTextureGlobal [2,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\rhs_t72b_03_co.paa"];
+	_vehicle setObjectTextureGlobal [3,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\rhs_t72b_04_co.paa"];
+	_vehicle setObjectTextureGlobal [4,"rhsgref\addons\rhsgref_vehicles_ret\data\cdf\rhs_t72b_05b_cdf_co.paa"];
+	_vehicle setObjectTextureGlobal [5,"#(argb,8,8,3)color(0.92,0.87,0.92,1)"];
+	_vehicle setObjectTextureGlobal [6,"#(argb,8,8,3)color(0.92,0.87,0.92,1)"];
+	_vehicle setObjectTextureGlobal [7,"#(argb,8,8,3)color(0.92,0.87,0.92,1)"];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 

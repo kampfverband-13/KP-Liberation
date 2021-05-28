@@ -28,8 +28,8 @@ Respawn_truck_typename = "B_Truck_01_medical_F";                        // This 
 huron_typename = "B_Heli_Transport_03_unarmed_F";                       // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "B_soldier_LAT_F";                                         // This defines the crew for vehicles.
 pilot_classname = "B_soldier_LAT_F";                                      // This defines the pilot for helicopters.
-KP_liberation_little_bird_classname = "C_Offroad_02_unarmed_green_F";              // These are the little birds which spawn on the Freedom or at Chimera base.
-KP_liberation_boat_classname = "B_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
+KP_liberation_little_bird_classname = "RHS_UH1Y_UNARMED_d";              // These are the little birds which spawn on the Freedom or at Chimera base.
+KP_liberation_boat_classname = "rhsgref_hidf_rhib";                 // These are the boats which spawn at the stern of the Freedom.
 KP_liberation_truck_classname = "B_Truck_01_transport_F";               // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
@@ -55,6 +55,7 @@ infantry_units = [
 
 light_vehicles = [
     ["B_Boat_Transport_01_F",50,0,50],
+    ["rhs_bmk_t",50,0,50],
     ["I_C_Boat_Transport_02_F",100,0,100],
     ["B_Boat_Armed_01_minigun_F",300,300,300],
     ["rhsusf_mkvsoc",400,400,400],
@@ -77,6 +78,7 @@ light_vehicles = [
     ["BWA3_Dingo2_FLW200_M2_Tropen",500,300,600],
     ["rhsusf_m113d_usarmy",500,100,500],
     ["I_LT_01_cannon_F",550,500,300],
+    ["I_LT_01_AT_F",550,900,300],
     ["I_LT_01_AA_F",550,900,300]
 ];
 
