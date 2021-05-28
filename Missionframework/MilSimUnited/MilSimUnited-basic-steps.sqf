@@ -11,7 +11,7 @@ initServer.sqf: Resourcen-Funktionen
 
 
 scripts\server\remotecall\sector_liberated_remote_call.sqf
-if (isServer) then { [] spawn gain_resources; };
+if (isServer) then { [] spawn gain_resources; []execVM "MilSimUnited\roadblocks.sqf" };
 
 
 init.sqf: 

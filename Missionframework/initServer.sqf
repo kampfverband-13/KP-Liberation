@@ -204,7 +204,7 @@ hs_spawn = compileFinal "
 			} forEach allPlayers;
 			
 			_allBases = GRLIB_all_fobs;
-			_allBases append [[4156.5,841.804,0]];
+			_allBases append [[10057,10117.2,0]];
 			
 			{
 				if ((getPos _player) distance _x < 500) then {
@@ -242,12 +242,14 @@ hs_spawn = compileFinal "
 	};
 ";
 
+activeRoadblock = [];
 sleep 300;
 
 if (isServer) then {
 	while {true} do {
+		[]execVM "MilSimUnited\roadblocks.sqf";
 		[]execVM "MilSimUnited\ieds.sqf";
-		[] spawn hs_spawn;
+		//[] spawn hs_spawn;
 		sleep 300;
 	};
 };

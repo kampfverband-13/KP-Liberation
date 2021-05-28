@@ -66,7 +66,7 @@ force force ace_cookoff_enableAmmoCookoff = false;
 force force ace_cookoff_probabilityCoef = 5;
 
 // ACE Crew Served Weapons
-force force ace_csw_ammoHandling = 2;
+force force ace_csw_ammoHandling = 1;
 force ace_csw_defaultAssemblyMode = true;
 ace_csw_dragAfterDeploy = true;
 force ace_csw_handleExtraMagazines = false;
@@ -198,7 +198,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.7;
+force force ace_medical_AIDamageThreshold = 0.75;
 force force ace_medical_bleedingCoefficient = 0.55;
 force ace_medical_blood_bloodLifetime = 600;
 force ace_medical_blood_enabledFor = 2;
@@ -357,7 +357,7 @@ force ace_trenches_smallEnvelopeDigDuration = 600;
 force ace_trenches_smallEnvelopeRemoveDuration = 600;
 
 // ACE Uncategorized
-force ace_fastroping_requireRopeItems = true;
+force ace_fastroping_requireRopeItems = false;
 force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.0403441;
 ace_inventory_inventoryDisplaySize = 0;
@@ -723,10 +723,10 @@ force force TFAR_SameLRFrequenciesForSide = true;
 force force TFAR_SameSRFrequenciesForSide = true;
 force TFAR_setting_defaultFrequencies_lr_east = "";
 force TFAR_setting_defaultFrequencies_lr_independent = "";
-force force TFAR_setting_defaultFrequencies_lr_west = "50,42,60,70,80";
+force force TFAR_setting_defaultFrequencies_lr_west = "50,51,60,70,80";
 force TFAR_setting_defaultFrequencies_sr_east = "";
 force TFAR_setting_defaultFrequencies_sr_independent = "";
-force force TFAR_setting_defaultFrequencies_sr_west = "42,100,200,300,400,500";
+force force TFAR_setting_defaultFrequencies_sr_west = "42,100,200,300,400,500,600";
 force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
 force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
 force TFAR_setting_DefaultRadio_Airborne_West = "TFAR_anarc210";
