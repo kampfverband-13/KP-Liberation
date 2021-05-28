@@ -145,7 +145,7 @@ KP_liberation_preset_opfor = 0;
 6  = Unsung
 7  = CUP Takistani Locals
 8  = CUP National Party of Chernarus */
-KP_liberation_preset_resistance = 3;
+KP_liberation_preset_resistance = 4;
 
 /* Civilians preset:
 0  = Custom (default vanilla)
@@ -156,7 +156,7 @@ KP_liberation_preset_resistance = 3;
 5  = Unsung
 6  = CUP Takistani Civilians
 7  = CUP Chernarussian Civilians */
-KP_liberation_preset_civilians = 2;
+KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
 0  = Use the default blacklist method (defined below)
@@ -212,10 +212,10 @@ KP_liberation_production_interval = 60;                                 // Time 
 GRLIB_sector_size = 500;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.3;                                  // Multiplier for defenders in buildings.
-GRLIB_battlegroup_size = 6;                                             // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 600;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_battlegroup_size = 8;                                             // Size of enemy battlegroups.
+GRLIB_vulnerability_timer = 900;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
 GRLIB_radiotower_size = 900;                                           // Radio Tower scanning range.
-GRLIB_surrender_chance = 75;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_surrender_chance = 70;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 6;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
@@ -229,9 +229,9 @@ KP_liberation_cr_kill_penalty = 5;                                      // Civil
 KP_liberation_cr_building_penalty = 5;                                  // Civil Reputation penalty for destroying/damaging a building.
 KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
 KP_liberation_cr_resistance_penalty = 5;                                // Civil Reputation penalty for killing a friendly resistance soldier.
-KP_liberation_cr_sector_gain = 5;                                       // Civil Reputation gain for liberate a sector.
+KP_liberation_cr_sector_gain = 2;                                       // Civil Reputation gain for liberate a sector.
 KP_liberation_cr_wounded_chance = 80;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_gain = 3;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
+KP_liberation_cr_wounded_gain = 5;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
 KP_liberation_civinfo_max = 3600;                                       // Civil Informant maximum spawn time. (seconds)
@@ -245,7 +245,7 @@ KP_liberation_convoy_ambush_chance = 8;                                 // Chanc
 KP_liberation_convoy_ambush_duration = 7200;                            // Duration of the convoy ambush event. (seconds)
 
 KP_liberation_resistance_tier2 = 20;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
-KP_liberation_resistance_tier3 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
+KP_liberation_resistance_tier3 = 40;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
 KP_liberation_resistance_at_chance = 100;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
 KP_liberation_resistance_sector_chance = 50;                            // Chance that a guerilla squad will join an ongoing sector attack.
 KP_liberation_resistance_ambush_chance = 100;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
@@ -1306,7 +1306,8 @@ boats_names = [
     "uns_PBR_M10",
     "uns_pbr_mk18",
     "uns_pbr",
-    "UNS_Zodiac_W"
+    "UNS_Zodiac_W",
+	"rhs_bmk_t"
 ];
 
 // Classnames of artillery vehicles, which should be added to the support module
