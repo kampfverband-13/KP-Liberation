@@ -29,9 +29,16 @@ Of course, the usual (behavioural) rules apply here as well as on the server. We
 
 _situation = '
 DE <br /><br />
-Unser Gegner ist eine gut ausgerüstete Miliz. Diese hat hier in Lythium Fuss gefasst und kämpft erbittert um die Kontrolle im Gebiet.<br /> 
-Der Feind verfügt über umlackierte, russische Fahrzeuge und besitzt starke Luftabwehr. Allerdings verfügt sie über keine Luftwaffe, was uns einen entscheidenden Vorteil verschaffen könnte.<br /><br />
-Achten Sie aber auf IEDs auf den Strassen, diese sind eine ständige Bedrohung!<br /><br />
+Die Lingor-Inseln liegen vor der Küste Venezuelas.<br />
+Aus einem langjährigen Bürgerkrieg ist eine rebellenähnliche Befreiungsarmee entstanden, welche die Regierung und das Land unterdrückt und vor kurzem erfolgreich einen Militärputsch durchgeführt hat.<br />
+Die durch den Putsch der "Lingor National Militia" gefährdeten Handelsrouten sollen nun geschützt werden, auch soll wieder Frieden auf der Inselgruppe einkehren. Deswegen findet eine gemeinsame Koorperation zwischen Länder der NATO sowie der OVKS im Kampf gegen die Putschisten statt.
+<br /><br />
+Kriegsführung: Symetrisch <br />
+Feind: Splittergruppe der Armee<br />
+Feind verfügt über:<br />
+Panzer: Ja<br />
+IFV: Ja<br />
+Luftwaffe: Ja (Nur Helikopter)<br /><br />
 
 Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurden von uns einige Änderungen vorgenommen, so dass das Gameplay mehr MilSim Charakter erhält. Wichtigste Punkte:<br />
 - Ziel ist es, die komplette Karte einzunehmen<br />
@@ -40,9 +47,16 @@ Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurde
 - Jeder Respawn kostet Ressourcen (Wartet also wenn immer möglich auf Hilfe)
 <br /><br />
 EN <br /><br />
-Our opponent is a well-equipped militia. This militia has gained a foothold here in Lythium and fights fiercely for control of the area.<br />
-The enemy has repainted Russian vehicles and has strong air defenses. However, it has no air force, which could give us a decisive advantage.<br />
-Watch out for IEDs on the roads though, they are a constant threat!<br /><br />
+The Lingor Islands lie off the coast of Venezuela.<br />
+From a long civil war, a rebel-like liberation army has emerged, which suppressed the government and the country and recently successfully carried out a military coup.<br />
+The trade routes endangered by the coup of the "Lingor National Militia" are now to be protected, also peace is to return to the archipelago. Therefore a common Koorperation between countries of the NATO as well as the OVKS in the fight against the Putschisten takes place.
+<br /><br />
+Warfare: Symetric<br />
+Enemy: splinter group of the army<br />
+Enemy has:<br />
+Tanks: Yes<br />
+IFV: Yes<br />
+Air Force: Yes (Helicopters only)<br /><br />
 
 The "Liberation" mode from the Killah Potatoes serves as the basis. However, we have made some changes so that the gameplay has more MilSim character. Most important points:<br /> 
 - The goal is to capture the entire map.<br /> 
@@ -60,14 +74,14 @@ sleep 60;
 hint format['
 Karte öffnen, Regeln lesen! \n
 Open map, read rules! \n
-TeamSpeak Server: kampfverband-13.de \n
+TeamSpeak Server: 94.130.39.20 \n
 '];
 
 sleep 180;
 hint format['
 Karte öffnen, Regeln lesen! \n
 Open map, read rules! \n
-TeamSpeak Server: kampfverband-13.de \n
+TeamSpeak Server: 94.130.39.20 \n
 '];
 
 while {true} do{
