@@ -1,6 +1,7 @@
 params ["_liberated_sector"];
 
-if (isServer) then { [] spawn gain_resources; };
+if (isServer) then { [] spawn gain_resources; []execVM "MilSimUnited\roadblocks.sqf"; };
+
 
 private _combat_readiness_increase = 0;
 switch (true) do {

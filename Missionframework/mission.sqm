@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2595;
+		nextID=2596;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=423;
+		nextID=455;
 	};
 	class Camera
 	{
-		pos[]={5752.9858,78.249611,9702.876};
-		dir[]={0.62002534,-0.60118234,-0.50413406};
-		up[]={0.46645224,0.79911107,-0.37926558};
-		aside[]={-0.63086683,-2.3748726e-008,-0.77589244};
+		pos[]={9998.9727,25.07696,10125.862};
+		dir[]={0.93521821,-0.34945038,-0.057020567};
+		up[]={0.34880269,0.93695492,-0.021266617};
+		aside[]={-0.060857326,-1.8626451e-009,-0.99814653};
 	};
 };
 binarizationWanted=0;
@@ -36570,13 +36570,13 @@ class Mission
 		class Item9
 		{
 			dataType="Marker";
-			position[]={10010.285,4.9614849,10019.754};
+			position[]={10054.898,5.0039063,10121.364};
 			name="startbase_marker";
 			text="Operation Base";
 			type="mil_start";
 			colorName="ColorWEST";
 			id=2444;
-			atlOffset=22.231485;
+			atlOffset=22.273907;
 		};
 		class Item10
 		{
