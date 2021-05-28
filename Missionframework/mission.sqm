@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4724.3501,95.801956,8807.0127};
-		dir[]={-0.58848387,-0.3400231,0.73354685};
-		up[]={-0.21277536,0.94041604,0.26522493};
-		aside[]={0.78002268,-1.7539423e-007,0.62577069};
+		pos[]={9994.6475,18.159695,10108.083};
+		dir[]={0.93138039,-0.25160754,0.26312777};
+		up[]={0.24213164,0.9678247,0.068405576};
+		aside[]={0.27187386,-7.9744495e-009,-0.96233761};
 	};
 };
 binarizationWanted=0;
@@ -42,14 +42,14 @@ addons[]=
 	"A3_Props_F_Orange_Humanitarian_Camps",
 	"A3_Structures_F_Exp_Walls_Railings",
 	"CUP_Editor_Signs_Config",
+	"CUP_Misc3_Config",
+	"A3_Ui_F",
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
 	"A3_Weapons_F",
 	"tfar_handhelds",
 	"rhs_c_troops",
-	"A3_Ui_F",
-	"CUP_Misc3_Config",
 	"A3_Structures_F_Mil_Fortification",
 	"CUP_Misc_e_Config",
 	"A3_Structures_F_Civ_InfoBoards",
@@ -207,56 +207,56 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
 		};
 		class Item12
-		{
-			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item13
-		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item14
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item15
-		{
-			className="tfar_handhelds";
-			name="tfar_handhelds";
-			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
-		};
-		class Item16
-		{
-			className="rhs_c_troops";
-			name="AFRF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item17
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item13
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item15
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item16
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item17
+		{
+			className="tfar_handhelds";
+			name="tfar_handhelds";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
 		class Item18
 		{
-			className="CUP_Misc3_Config";
-			name="CUP_Misc3_Config";
+			className="rhs_c_troops";
+			name="AFRF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item19
 		{
@@ -563,14 +563,15 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
 			name="Operations Base";
+			state=1;
 			class Entities
 			{
-				items=42;
+				items=44;
 				class Item0
 				{
 					dataType="Object";
@@ -2077,14 +2078,67 @@ class Mission
 					type="Land_TentLamp_01_suspended_F";
 					atlOffset=18.143124;
 				};
+				class Item42
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10067.132,9.4526653,10124.499};
+						angles[]={0,1.8594738,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=2621;
+					type="Misc_cargo_cont_net3";
+					atlOffset=0.00032424927;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={10054.898,5.0039063,10121.364};
+					name="startbase_marker";
+					text="Operation Base";
+					type="mil_start";
+					colorName="ColorWEST";
+					id=2444;
+					atlOffset=22.273907;
+				};
 			};
 			id=122;
-			atlOffset=20.053501;
+			atlOffset=22.496328;
 		};
 		class Item1
 		{
 			dataType="Layer";
 			name="lib_basics";
+			state=1;
 			class Entities
 			{
 				items=15;
@@ -12607,6 +12661,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="lib_markers";
+			state=1;
 			class Entities
 			{
 				items=1;
@@ -37470,17 +37525,6 @@ class Mission
 		};
 		class Item9
 		{
-			dataType="Marker";
-			position[]={10054.898,5.0039063,10121.364};
-			name="startbase_marker";
-			text="Operation Base";
-			type="mil_start";
-			colorName="ColorWEST";
-			id=2444;
-			atlOffset=22.273907;
-		};
-		class Item10
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -37531,47 +37575,6 @@ class Mission
 			};
 			id=2549;
 			atlOffset=9.5367432e-007;
-		};
-		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10067.132,9.4526653,10124.499};
-				angles[]={0,1.8594738,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=2621;
-			type="Misc_cargo_cont_net3";
-			atlOffset=0.00032424927;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 	};
 };
