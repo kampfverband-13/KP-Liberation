@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2624;
+		nextID=2626;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=455;
+		nextID=487;
 	};
 	class Camera
 	{
-		pos[]={9994.6475,18.159695,10108.083};
-		dir[]={0.93138039,-0.25160754,0.26312777};
-		up[]={0.24213164,0.9678247,0.068405576};
-		aside[]={0.27187386,-7.9744495e-009,-0.96233761};
+		pos[]={9994.8965,18.856958,10106.424};
+		dir[]={0.93249106,-0.22238281,0.28479654};
+		up[]={0.21270089,0.97495228,0.064962372};
+		aside[]={0.29211229,3.3256219e-007,-0.95644349};
 	};
 };
 binarizationWanted=0;
@@ -44,6 +44,7 @@ addons[]=
 	"CUP_Editor_Signs_Config",
 	"CUP_Misc3_Config",
 	"A3_Ui_F",
+	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
@@ -52,7 +53,6 @@ addons[]=
 	"rhs_c_troops",
 	"A3_Structures_F_Mil_Fortification",
 	"CUP_Misc_e_Config",
-	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"ace_cargo",
 	"A3_Structures_F_Civ_Camping",
@@ -571,7 +571,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=44;
+				items=46;
 				class Item0
 				{
 					dataType="Object";
@@ -1199,7 +1199,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10074.978,8.953393,10122.808};
-						angles[]={-0,5.2035527,0};
+						angles[]={0,5.2035527,0};
 					};
 					side="Empty";
 					class Attributes
@@ -1403,7 +1403,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10074.982,9.1081095,10123.767};
-						angles[]={-0,2.353307,0};
+						angles[]={0,2.353307,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1765,7 +1765,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10077.217,9.0450706,10123.439};
-						angles[]={-0,1.891265,-0};
+						angles[]={0,1.891265,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1806,7 +1806,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10079.922,9.0450706,10122.604};
-						angles[]={-0,1.891265,-0};
+						angles[]={0,1.891265,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1847,7 +1847,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10082.365,9.0450706,10121.77};
-						angles[]={-0,1.891265,-0};
+						angles[]={0,1.891265,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1888,7 +1888,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10077.54,8.3552952,10122.175};
-						angles[]={-0,0.2979705,-0};
+						angles[]={0,0.2979705,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1929,7 +1929,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10080.205,8.3552952,10121.476};
-						angles[]={-0,0.2979705,-0};
+						angles[]={0,0.2979705,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1970,7 +1970,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10082.728,8.3552942,10120.879};
-						angles[]={-0,0.2979705,-0};
+						angles[]={0,0.2979705,0};
 					};
 					side="Empty";
 					flags=4;
@@ -2011,7 +2011,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10074.369,8.9971638,10121.449};
-						angles[]={-0,0.25377411,0};
+						angles[]={0,0.25377411,0};
 					};
 					side="Empty";
 					flags=4;
@@ -2130,9 +2130,129 @@ class Mission
 					id=2444;
 					atlOffset=22.273907;
 				};
+				class Item44
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10056.846,9.0828819,10128.182};
+						angles[]={0,5.9153223,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=2624;
+					type="Land_MapBoard_F";
+					atlOffset=0.00032424927;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="MilSimUnited\rules_ger_1.jpg";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item45
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10058.627,9.0828819,10128.266};
+						angles[]={0,0.26996753,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=2625;
+					type="Land_MapBoard_F";
+					atlOffset=0.00032424927;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="MilSimUnited\rules_en_1.jpg";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			id=122;
-			atlOffset=22.496328;
+			atlOffset=24.662083;
 		};
 		class Item1
 		{
@@ -12541,6 +12661,7 @@ class Mission
 					{
 					};
 					id=2464;
+					atlOffset=17.280001;
 				};
 				class Item14
 				{
@@ -12655,7 +12776,7 @@ class Mission
 				};
 			};
 			id=238;
-			atlOffset=-0.24353409;
+			atlOffset=20.883648;
 		};
 		class Item2
 		{
