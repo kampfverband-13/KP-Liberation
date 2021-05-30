@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=551;
+		nextID=583;
 	};
 	class Camera
 	{
@@ -38120,7 +38120,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="lib_basics";
-			state=1;
 			class Entities
 			{
 				items=15;
@@ -38252,10 +38251,10 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={9915.4102,5,123.06979};
-						angles[]={0,0.38366026,0};
+						position[]={9915.4102,5,123.07};
+						angles[]={0,0.38365829,0};
 					};
-					name="HC1_1";
+					name="HC1";
 					isPlayable=1;
 					id=2453;
 					type="HeadlessClient_F";
@@ -38265,10 +38264,10 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={9915.3916,5,119.85483};
-						angles[]={0,0.38366026,0};
+						position[]={9915.3916,5,119.855};
+						angles[]={0,0.38365829,0};
 					};
-					name="HC2_1";
+					name="HC2";
 					isPlayable=1;
 					id=2454;
 					type="HeadlessClient_F";
@@ -38278,10 +38277,10 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={9915.3018,5,116.19492};
-						angles[]={0,0.38366026,0};
+						position[]={9915.3018,5,116.195};
+						angles[]={0,0.38365829,0};
 					};
-					name="HC3_1";
+					name="HC3";
 					isPlayable=1;
 					id=2455;
 					type="HeadlessClient_F";
@@ -48523,7 +48522,6 @@ class Mission
 					{
 					};
 					id=2464;
-					atlOffset=17.280001;
 				};
 				class Item14
 				{
@@ -48638,7 +48636,7 @@ class Mission
 				};
 			};
 			id=238;
-			atlOffset=20.883648;
+			atlOffset=-0.24353409;
 		};
 		class Item2
 		{
