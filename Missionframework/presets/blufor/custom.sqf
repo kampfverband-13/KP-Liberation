@@ -128,7 +128,7 @@ air_vehicles = [
 
 
 static_vehicles = [
-    ["BWA3_MRS120_Fleck",0,0,0]
+    ["BWA3_MRS120_Fleck",150,400,0]
 ];
 
 
@@ -178,8 +178,7 @@ support_vehicles = [
     ["B_Slingload_01_Ammo_F",250,1000,0],
     ["rhsusf_M978A4_usarmy_d",150,0,300],
     ["RHS_Ural_Fuel_MSV_01",150,0,300],
-	["Land_MapBoard_F",0,0,0],
-	["Land_TentLamp_01_suspended_F",0,0,0]
+	["Land_MapBoard_F",0,0,0]
 ];
 
 /*

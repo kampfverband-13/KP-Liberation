@@ -356,11 +356,13 @@ while { true } do {
 					_lampPosGer = _rulesGer modelToWorld [0,-0.15,0.95];
 					_lampGer = createVehicle ["Land_TentLamp_01_suspended_F", _lampPosGer, [], 0, "CAN_COLLIDE"];
 					_lampGer setDir _dirLamps;
-					_lampGer setLightIntensity 0.5;
+					_lampGer allowDamage false;
+					_lampGer enableSimulationGlobal false;
 					_lampPosEng = _rulesEng modelToWorld [0,-0.15,0.95];
 					_lampEng = createVehicle ["Land_TentLamp_01_suspended_F", _lampPosEng, [], 0, "CAN_COLLIDE"];
 					_lampEng setDir _dirLamps;
-					_lampEng setLightIntensity 0.5;
+					_lampEng allowDamage false;
+					_lampEng enableSimulationGlobal false;
 				};
             };
 				

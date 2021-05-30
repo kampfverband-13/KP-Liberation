@@ -66,7 +66,7 @@ force force ace_cookoff_enableAmmoCookoff = false;
 force force ace_cookoff_probabilityCoef = 5;
 
 // ACE Crew Served Weapons
-force force ace_csw_ammoHandling = 1;
+force ace_csw_ammoHandling = 1;
 force ace_csw_defaultAssemblyMode = true;
 ace_csw_dragAfterDeploy = true;
 force ace_csw_handleExtraMagazines = false;
