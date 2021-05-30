@@ -680,6 +680,12 @@ force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
 
+// Laxemann Immerse
+force L_Immerse_exShake = true;
+force L_Immerse_force = false;
+force L_Immerse_recoil = true;
+force L_Immerse_twitch = true;
+
 // TFAR - Clientside settings
 TFAR_curatorCamEars = false;
 TFAR_default_radioVolume = 7.35048;
