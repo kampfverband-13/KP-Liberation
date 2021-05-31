@@ -882,7 +882,8 @@ blacklisted_from_arsenal = [
     "I_E_UavTerminal",
     "B_UavTerminal",
     "ChemicalDetector_01_watch_F",
-    "Uns_US_searchlight_Bag"
+    "Uns_US_searchlight_Bag",
+	"immersion_pops_pop0"
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array

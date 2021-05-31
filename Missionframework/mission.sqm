@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2643;
+		nextID=2644;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=615;
+		nextID=679;
 	};
 	class Camera
 	{
@@ -36787,12 +36787,12 @@ class Mission
 					class Attributes
 					{
 						condition="call{this}";
-						onActivation="call{[thisList] execVM ""MilSimUnited\heal.sqf"";}";
-						onDeactivation="call{[thisList] execVM ""MilSimUnited\heal.sqf"";}";
+						onActivation="call{[thisList,false] execVM ""MilSimUnited\heal.sqf"";}";
+						onDeactivation="call{[thisList,false] execVM ""MilSimUnited\heal.sqf"";}";
 						sizeA=5;
 						sizeB=5;
 						sizeC=5;
-						timeout[]={1,1,1};
+						timeout[]={0.5,0.5,0.5};
 						repeatable=1;
 						activationBy="ANYPLAYER";
 						isRectangle=1;
