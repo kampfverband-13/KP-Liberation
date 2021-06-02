@@ -23,6 +23,7 @@ while {true} do {
         huron setDamage 0;
         huron allowdamage true;
         [huron] call KPLIB_fnc_addObjectInit;
+		[]execVM "MilSimUnited\huron_respawn.sqf";
     };
     [huron] call KPLIB_fnc_clearCargo;
     huron setVariable ["ace_medical_isMedicalVehicle", true, true];
