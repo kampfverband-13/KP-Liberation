@@ -55,18 +55,15 @@ while {true} do {
     _overlayVisible = !isNull _overlay;
 
     // Player is at FOB
-    if (_visibleMap) then {
+    if (_currentFob != "" || {_visibleMap}) then {
         _showResources = true;
 
         private _nearestFob = player getVariable "KPLIB_fobPos";
         ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
-        if (KP_liberation_resources_global || _currentFob == "") then {
-           
-		   // Overwrite FOB name in global mode
-		    if (_currentFob != "") then {
-				_currentFob = localize "STR_RESOURCE_GLOBAL";
-			};
+        if (KP_liberation_resources_global || {_visibleMap}) then {
+            // Overwrite FOB name in global mode
+            _currentFob = localize "STR_RESOURCE_GLOBAL";
 
             KP_liberation_supplies = KP_liberation_supplies_global;
             KP_liberation_ammo = KP_liberation_ammo_global;
@@ -139,7 +136,7 @@ while {true} do {
             };
 
             _nearest_active_sector = [GRLIB_sector_size] call KPLIB_fnc_getNearestSector;
-            if ( _nearest_active_sector != "" && _visibleMap ) then {
+            if ( _nearest_active_sector != "" ) then {
                 _zone_size = GRLIB_capture_size;
                 if ( _nearest_active_sector in sectors_bigtown ) then {
                     _zone_size = GRLIB_capture_size * 1.4;
