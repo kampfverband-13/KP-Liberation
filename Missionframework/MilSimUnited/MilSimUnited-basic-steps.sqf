@@ -63,6 +63,16 @@ Statt "res/lib.paa" und "res/splash_libe2.paa" muss "res/MilSimUnited.paa" aufge
 functions\curator\fn_initCuratorHandlers.sqf: Komplett auskommentieren
 
 
+GUI nur noch auf Karte anzeigen: 
+scripts\client\ui\ui_manager.sqf: durch den Modifizierten ersetzen
+
+
+Notifications deaktivieren:
+BIS_fnc_showNotification suchen und auskommentieren:
+- scripts\client\remotecall\remote_call_sector.sqf
+
+
+
 
 
 

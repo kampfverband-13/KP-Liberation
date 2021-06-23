@@ -56,12 +56,17 @@ while {true} do {
 
     // Player is at FOB
     if (_currentFob != "" || {_visibleMap}) then {
-        _showResources = true;
+		
+		if (_visibleMap) then {
+			_showResources = true;
+		}else{
+			_showResources = false;
+		};
 
         private _nearestFob = player getVariable "KPLIB_fobPos";
         ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
-        if (KP_liberation_resources_global || {_visibleMap}) then {
+        if (KP_liberation_resources_global || (_visibleMap && _currentFob == "")) then {
             // Overwrite FOB name in global mode
             _currentFob = localize "STR_RESOURCE_GLOBAL";
 
@@ -95,9 +100,16 @@ while {true} do {
             private [ "_attacked_string" ];
             _attacked_string = [markerpos "opfor_capture_marker"] call KPLIB_fnc_getLocationName;
 
-            (_overlay displayCtrl (401)) ctrlShow true;
-            (_overlay displayCtrl (402)) ctrlSetText _attacked_string;
-            (_overlay displayCtrl (403)) ctrlSetText (markerText "opfor_capture_marker");
+			if (_visibleMap) then {
+				(_overlay displayCtrl (401)) ctrlShow true;
+				(_overlay displayCtrl (402)) ctrlSetText _attacked_string;
+				(_overlay displayCtrl (403)) ctrlSetText (markerText "opfor_capture_marker");
+			}else{
+				(_overlay displayCtrl (401)) ctrlShow false;
+				(_overlay displayCtrl (402)) ctrlSetText "";
+				(_overlay displayCtrl (403)) ctrlSetText "";
+			};
+			
         } else {
             (_overlay displayCtrl (401)) ctrlShow false;
             (_overlay displayCtrl (402)) ctrlSetText "";
@@ -116,7 +128,13 @@ while {true} do {
 
             if (!isNil "active_sectors" && ([] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
 
-                (_overlay displayCtrl (517)) ctrlShow true;
+                
+				if (_visibleMap) then {
+					(_overlay displayCtrl (517)) ctrlShow true;
+				}else{
+					(_overlay displayCtrl (517)) ctrlShow false;
+				};
+				
 
                 if (!_active_sectors_hint) then {
                     hint localize "STR_OVERLOAD_HINT";
@@ -156,7 +174,15 @@ while {true} do {
                 _bar ctrlCommit ([0, 2] select ctrlShown _bar);
 
                 (_overlay displayCtrl (205)) ctrlSetText (markerText _nearest_active_sector);
-                {(_overlay displayCtrl (_x)) ctrlShow true;} forEach _sectorcontrols;
+				
+
+				if (_visibleMap) then {
+					{(_overlay displayCtrl (_x)) ctrlShow true;} forEach _sectorcontrols;
+				}else{
+					{(_overlay displayCtrl (_x)) ctrlShow false;} forEach _sectorcontrols;
+				};
+				
+				
                 if (_nearest_active_sector in blufor_sectors) then {
                     (_overlay displayCtrl (205)) ctrlSetTextColor [0,0.3,1.0,1];
                 } else {
