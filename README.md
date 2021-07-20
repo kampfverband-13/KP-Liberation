@@ -27,6 +27,8 @@ This mission is only a continued project based on the original, but most likely 
 
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
 
+[Continued Project by the KillahPotaoes](https://github.com/KillahPotatoes/KP-Liberation)
+
 If you like the work and think it's worth a small donation, feel free to use the following link:
 
 [Donate via paypal.me](https://www.paypal.me/wyqer)
