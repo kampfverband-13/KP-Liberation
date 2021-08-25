@@ -127,10 +127,10 @@ if (count _intersect != 0) then {
 			
 			_grpInfantry1 = createGroup east;
 			_spawnInf1 = _grpInfantry1 createUnit [opfor_rifleman, _rbPos1, [], 0, "NONE"];
-			_spawnInf2 = _grpInfantry1 createUnit [opfor_rifleman, _rbPos1, [], 0, "NONE"];
+			_spawnInf2 = _grpInfantry1 createUnit [opfor_rpg, _rbPos1, [], 0, "NONE"];
 			_grpInfantry2 = createGroup east;
 			_spawnInf3 = _grpInfantry2 createUnit [opfor_rifleman, _rbPos2, [], 0, "NONE"];
-			_spawnInf4 = _grpInfantry2 createUnit [opfor_rifleman, _rbPos2, [], 0, "NONE"];
+			_spawnInf4 = _grpInfantry2 createUnit [opfor_aa, _rbPos2, [], 0, "NONE"];
 			
 			_rbSandbagPos1 = _vehicle1 getRelPos [7.5,-30];
 			_rbSandbagPos2 = _vehicle2 getRelPos [7.5,-30];

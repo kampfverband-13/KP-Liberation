@@ -1,11 +1,31 @@
 params ["_liberated_sector"];
 
-if (isServer) then { [] spawn gain_resources; []execVM "MilSimUnited\roadblocks.sqf"; };
-
-
+if (isServer) then
+	{
+	_score = 20;
+	switch (true) do
+		{
+		case (_liberated_sector in sectors_bigtown):    {_score = 50; [] spawn gain_resources; [] spawn gain_resources; [] spawn gain_resources;};
+		case (_liberated_sector in sectors_capture):    {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
+		case (_liberated_sector in sectors_military):   {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
+		case (_liberated_sector in sectors_factory):    {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
+		case (_liberated_sector in sectors_tower):      {_score = 20; [] spawn gain_resources;};
+		};
+	[]execVM "MilSimUnited\roadblocks.sqf"; 
+	
+	_headlessClients = entities 'HeadlessClient_F';
+	_humanPlayers = allPlayers - _headlessClients;
+	
+	{
+		_uid = getPlayerUID _x;
+		[_uid,_score] call KPR_fnc_addScore
+	} foreach _humanPlayers;
+	
+	};
+	
 private _combat_readiness_increase = 0;
 switch (true) do {
-    case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * GRLIB_difficulty_modifier; };
     case (_liberated_sector in sectors_capture):    {_combat_readiness_increase = floor (random 6) * GRLIB_difficulty_modifier;};
     case (_liberated_sector in sectors_military):   {_combat_readiness_increase = 5 + (floor (random 11)) * GRLIB_difficulty_modifier;};
     case (_liberated_sector in sectors_factory):    {_combat_readiness_increase = 3 + (floor (random 7)) * GRLIB_difficulty_modifier;};
