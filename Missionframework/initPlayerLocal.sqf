@@ -70,7 +70,20 @@ The "Liberation" mode from the Killah Potatoes serves as the basis. However, we 
 player createDiaryRecord ['Diary', ['Regeln / Rules', _rules], taskNull, '', false];
 player createDiaryRecord ['Diary', ['Situation', _situation], taskNull, '', false];
 
-sleep 60;
+sleep 10;
+
+_uidPlayer = getPlayerUID player;
+if(_uidPlayer in KP_liberation_commander_actions) then {
+	hint format['Du bist ein Commander!'];
+	_kpScore = [_uidPlayer] call KPR_fnc_getScore;
+	if(_kpScore < 5120) then {
+		[_uidPlayer,5120] call KPR_fnc_setScore;
+		[_uidPlayer,8] call KPR_fnc_setRank;
+	};
+};
+sleep 20;
+
+
 hint format['
 Karte öffnen, Regeln lesen! \n
 Open map, read rules! \n

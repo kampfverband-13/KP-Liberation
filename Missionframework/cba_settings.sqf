@@ -638,6 +638,45 @@ emr_main_preventHighVaulting = false;
 force emr_main_staminaCoefficient = 0;
 force emr_main_whitelistStr = "";
 
+// KP Ranks
+KPR_autoMode = true;
+force KPR_autoModeInterval = 5;
+force KPR_extendedLog = false;
+force KPR_playerNation = false;
+
+// KP Ranks Leveling System
+force KPR_airPoints = 32;
+force KPR_avhPoints = 12;
+force KPR_infPoints = 4;
+force KPR_killedPenalty = 8;
+force KPR_levelAnnounce = false;
+force KPR_levelDebug = false;
+force KPR_levelSystem = true;
+force KPR_lvhPoints = 8;
+force KPR_playPoints = 24;
+force KPR_playtime = 60;
+force KPR_rank1 = 80;
+force KPR_rank2 = 320;
+force KPR_rank3 = 720;
+force KPR_rank4 = 1280;
+force KPR_rank5 = 2000;
+force KPR_rank6 = 2880;
+force KPR_rank7 = 3920;
+force KPR_rank8 = 5120;
+force KPR_rank9 = 6480;
+force KPR_rank10 = 8000;
+force KPR_rank11 = 9680;
+force KPR_rank12 = 11520;
+force KPR_rank13 = 13520;
+force KPR_rank14 = 15680;
+force KPR_rank15 = 18000;
+force KPR_rank16 = 20480;
+force KPR_rank17 = 23120;
+force KPR_rank18 = 25920;
+force KPR_rank19 = 28880;
+force KPR_tkPenalty = 24;
+force KPR_updateInterval = 1;
+
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
 force lambs_danger_disableAIAutonomousManoeuvres = false;

@@ -70,6 +70,14 @@ if (KP_liberation_high_command) then {KPLIB_fsm_highcommand = [] call KPLIB_fnc_
 
 // Select FOB templates
 switch (KP_liberation_preset_opfor) do {
+    case 0: {
+        KPLIB_fob_templates = [
+            "scripts\fob_templates\milsimunited\template1.sqf",
+            "scripts\fob_templates\milsimunited\template2.sqf",
+            "scripts\fob_templates\milsimunited\template3.sqf",
+            "scripts\fob_templates\milsimunited\template4.sqf"
+        ];
+    };
     case 1: {
         KPLIB_fob_templates = [
             "scripts\fob_templates\apex\template1.sqf",

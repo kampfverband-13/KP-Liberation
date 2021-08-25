@@ -30,15 +30,29 @@ private _nextobject = objNull;
 
     _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), 0];
 
-    _nextobject = _nextclass createVehicle _nextpos;
-    _nextobject allowDamage false;
+	switch (_nextclass) do {
+		case KP_liberation_supply_crate: {
+			_nextobject = [KP_liberation_supply_crate, 100, _nextpos] call KPLIB_fnc_createCrate;
+		};
+		case KP_liberation_ammo_crate: {
+			_nextobject = [KP_liberation_ammo_crate, 100, _nextpos] call KPLIB_fnc_createCrate;
+		};
+		case KP_liberation_fuel_crate: {
+			_nextobject = [KP_liberation_fuel_crate, 100, _nextpos] call KPLIB_fnc_createCrate;
+		};
+		default {
+			_nextobject = _nextclass createVehicle _nextpos;
+		};
+	};
+	
+	_nextobject allowDamage false;
     _nextobject setVectorUp [0, 0, 1];
     _nextobject setdir _nextdir;
     _nextobject setpos _nextpos;
     _nextobject setVectorUp [0, 0, 1];
     _nextobject setdir _nextdir;
     _nextobject setpos _nextpos;
-
+	
     _base_objects pushBack _nextobject;
 } forEach _objects_to_build;
 

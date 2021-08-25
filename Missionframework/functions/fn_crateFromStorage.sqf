@@ -58,8 +58,9 @@ if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dra
 reverse _storedCrates;
 _i = 0;
 {
+	private _height = [typeOf (_x select 0)] call KPLIB_fnc_getCrateHeight;
     detach (_x select 0);
-    (_x select 0) attachTo [_storage, [(_storagePositions select _i) select 0, (_storagePositions select _i) select 1, _x select 1]];
+    (_x select 0) attachTo [_storage, [(_storagePositions select _i) select 0, (_storagePositions select _i) select 1, ((_storagePositions select _i) select 2) + _height]];
     _i = _i + 1;
 } forEach (_storedCrates apply {[_x, [typeOf _x] call KPLIB_fnc_getCrateHeight]});
 

@@ -8,7 +8,7 @@ private _couldnt_spawn = false;
 if ( _couldnt_spawn ) exitWith {["Could not find enough map positions for convoy hijack mission", "ERROR"] call KPLIB_fnc_log;};
 
 private _convoy_destinations = [];
-{ _convoy_destinations pushback (markerPos _x); } foreach _convoy_destinations_markers;
+{ _convoy_destinations pushback getPos ([(markerPos _x), 500] call BIS_fnc_nearestRoad); } foreach _convoy_destinations_markers;
 
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];
@@ -31,7 +31,8 @@ private _boxes_loaded = 0;
 while { _boxes_loaded < _boxes_amount } do {
     _boxes_loaded = _boxes_loaded + 1;
     sleep 0.5;
-    private _next_box = [KP_liberation_ammo_crate, 100, _spawnpos getPos [15, 135]] call KPLIB_fnc_createCrate;
+	_randomCrate = selectRandom [KP_liberation_ammo_crate,KP_liberation_supply_crate,KP_liberation_fuel_crate];
+    private _next_box = [_randomCrate, 100, _spawnpos getPos [15, 135]] call KPLIB_fnc_createCrate;
     sleep 0.5;
     [_next_box, 50] call _load_box_fnc;
 };
