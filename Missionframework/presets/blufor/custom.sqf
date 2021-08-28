@@ -89,7 +89,8 @@ light_vehicles = [
     ["rhsusf_m113_usarmy",500,100,500],
     ["I_LT_01_cannon_F",550,500,300],
     ["I_LT_01_AT_F",550,900,300],
-    ["I_LT_01_AA_F",550,900,300]
+    ["I_LT_01_AA_F",550,900,300],
+	["rhsusf_stryker_m1134_wd",650,900,450]
 ];
 
 
@@ -124,6 +125,7 @@ air_vehicles = [
     ["RHS_C130J",2000,0,2000],
     ["RHS_MELB_AH6M",800,1000,800],
     ["RHS_UH1Y",800,1000,800],
+	["RHSGREF_A29B_HIDF",1000,1000,1000],
     ["RHS_UH60M_ESSS",1600,2000,1600],
     ["RHS_Mi8MTV3_heavy_vdv",1400,1600,1400],
     ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
