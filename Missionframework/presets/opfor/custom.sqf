@@ -82,10 +82,12 @@ opfor_vehicles = [
     "UK3CB_AAF_O_T72A",
     "UK3CB_AAF_O_T72A",
     "UK3CB_AAF_O_T72A",
+	"UK3CB_AAF_O_2S6M_Tunguska",
+	"UK3CB_AAF_O_2S6M_Tunguska",
+	"UK3CB_AAF_O_2S6M_Tunguska",
     "UK3CB_AAF_O_T72BC",
     "UK3CB_AAF_O_T72BC",
   	"UK3CB_AAF_O_2S3",
-	"UK3CB_AAF_O_2S6M_Tunguska",
 	"UK3CB_AAF_O_ZsuTank"
 ];
 
@@ -114,6 +116,8 @@ opfor_battlegroup_vehicles = [
 	"UK3CB_AAF_O_T72BC",
 	"UK3CB_AAF_O_BMP2K",
 	"UK3CB_AAF_O_BMP2K",
+	"UK3CB_AAF_O_2S6M_Tunguska",
+	"UK3CB_AAF_O_2S6M_Tunguska",
 	"UK3CB_AAF_O_Mi_24P",
 	"UK3CB_AAF_O_Mi_24V",
 	"UK3CB_AAF_O_Mi8AMTSh"
