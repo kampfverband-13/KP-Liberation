@@ -645,7 +645,7 @@ force KPR_extendedLog = false;
 force KPR_playerNation = false;
 
 // KP Ranks Leveling System
-force KPR_airPoints = 32;
+force KPR_airPoints = 12;
 force KPR_avhPoints = 12;
 force KPR_infPoints = 4;
 force KPR_killedPenalty = 8;

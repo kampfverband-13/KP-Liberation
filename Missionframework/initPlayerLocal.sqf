@@ -29,16 +29,15 @@ Of course, the usual (behavioural) rules apply here as well as on the server. We
 
 _situation = '
 DE <br /><br />
-Die Lingor-Inseln liegen vor der Küste Venezuelas.<br />
-Aus einem langjährigen Bürgerkrieg ist eine rebellenähnliche Befreiungsarmee entstanden, welche die Regierung und das Land unterdrückt und vor kurzem erfolgreich einen Militärputsch durchgeführt hat.<br />
-Die durch den Putsch der "Lingor National Militia" gefährdeten Handelsrouten sollen nun geschützt werden, auch soll wieder Frieden auf der Inselgruppe einkehren. Deswegen findet eine gemeinsame Koorperation zwischen Länder der NATO sowie der OVKS im Kampf gegen die Putschisten statt.
-<br /><br />
+Virolathi - das an der russischen Grenze liegende Gebiet in Finnland wurde von feindlichen Kräften angegriffen.<br />
+Erste Berichte sprachen von einem russischen Angriff. Durch die Zusammenarbeit mehrerer Geheimdienste und der direkten Kommunikation mit Russland konnte allerdings eine Beteiligung von russischer Seite ausgeschlossen werden.<br />
+Es stellte sich heraus, dass eine Ultranationalistische Gruppe für die Angriffe verantwortlich sind. Es wird vermutet, dass die Gruppe eine Destabilisierung anstreben. Die NATO sowie der OVKS arbeiten gemeinsam, um den Feind zurückzuschlagen.<br /><br />
 Kriegsführung: Symetrisch <br />
-Feind: Splittergruppe der Armee<br />
+Feind: Ultranationalisten, Herkunft unbekannt<br />
 Feind verfügt über:<br />
 Panzer: Ja<br />
 IFV: Ja<br />
-Luftwaffe: Ja (Nur Helikopter)<br /><br />
+Luftwaffe: Ja<br /><br />
 
 Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurden von uns einige Änderungen vorgenommen, so dass das Gameplay mehr MilSim Charakter erhält. Wichtigste Punkte:<br />
 - Ziel ist es, die komplette Karte einzunehmen<br />
@@ -47,16 +46,15 @@ Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurde
 - Jeder Respawn kostet Ressourcen (Wartet also wenn immer möglich auf Hilfe)
 <br /><br />
 EN <br /><br />
-The Lingor Islands lie off the coast of Venezuela.<br />
-From a long civil war, a rebel-like liberation army has emerged, which suppressed the government and the country and recently successfully carried out a military coup.<br />
-The trade routes endangered by the coup of the "Lingor National Militia" are now to be protected, also peace is to return to the archipelago. Therefore a common Koorperation between countries of the NATO as well as the OVKS in the fight against the Putschisten takes place.
-<br /><br />
+Virolathi - the area in Finland located on the Russian border was attacked by enemy forces.<br />
+Initial reports spoke of a Russian attack. However, due to the cooperation of several intelligence agencies and direct communication with Russia, it was possible to exclude the involvement of the Russian side.<br />
+It turned out that an ultranationalist group was responsible for the attacks. It is suspected that the group is aiming at destabilization. NATO as well as the CSTO are working together to repel the enemy.<br /><br />
 Warfare: Symetric<br />
-Enemy: splinter group of the army<br />
+Enemy: ultranationalists, origin unknown<br />
 Enemy has:<br />
 Tanks: Yes<br />
 IFV: Yes<br />
-Air Force: Yes (Helicopters only)<br /><br />
+Air Force: Yes<br /><br />
 
 The "Liberation" mode from the Killah Potatoes serves as the basis. However, we have made some changes so that the gameplay has more MilSim character. Most important points:<br /> 
 - The goal is to capture the entire map.<br /> 
