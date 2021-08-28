@@ -145,7 +145,7 @@ KP_liberation_preset_opfor = 0;
 6  = Unsung
 7  = CUP Takistani Locals
 8  = CUP National Party of Chernarus */
-KP_liberation_preset_resistance = 4;
+KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
 0  = Custom (default vanilla)
@@ -209,13 +209,13 @@ GRLIB_secondary_objective_impact = 0.6;                                 // The p
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 500;                                               // Range to activate a sector.
+GRLIB_sector_size = 800;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.3;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 8;                                             // Size of enemy battlegroups.
 GRLIB_vulnerability_timer = 900;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 900;                                           // Radio Tower scanning range.
-GRLIB_surrender_chance = 70;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_radiotower_size = 1500;                                           // Radio Tower scanning range.
+GRLIB_surrender_chance = 50;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 6;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
@@ -225,12 +225,12 @@ GRLIB_sector_cap = 150;                                                 // Cap f
 GRLIB_battlegroup_cap = 50;                                            // Cap for enemy battlegroups.
 GRLIB_patrol_cap = 50;                                                 // Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 5;                                  // Civil Reputation penalty for destroying/damaging a building.
-KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_resistance_penalty = 5;                                // Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_kill_penalty = 10;                                      // Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 8;                                  // Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 5;                                   // Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_resistance_penalty = 10;                                // Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 2;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 80;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_chance = 50;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KP_liberation_cr_wounded_gain = 5;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
@@ -276,13 +276,98 @@ KP_liberation_suppMod_whitelist = [
 /* Array of radio tower classnames to place at radio tower sectors.
 If more than one is added, it'll be selected random for each sector on campaign start. */
 KPLIB_radioTowerClassnames = [
-    "Land_TTowerBig_2_F"
+	"Land_Communication_F",
+	"Land_TTowerBig_1_F",
+	"Land_TTowerBig_2_F",
+	"Land_Telek1",
+	"Ins_WarfareBArtilleryRadar",
+	"76n6ClamShell"
 ];
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
 blacklisted_from_arsenal = [
+	"KPR_BWF_0",
+	"KPR_BWF_1",
+	"KPR_BWF_2",
+	"KPR_BWF_3",
+	"KPR_BWF_4",
+	"KPR_BWF_5",
+	"KPR_BWF_6",
+	"KPR_BWF_7",
+	"KPR_BWF_8",
+	"KPR_BWF_9",
+	"KPR_BWF_10",
+	"KPR_BWF_11",
+	"KPR_BWF_12",
+	"KPR_BWF_13",
+	"KPR_BWF_14",
+	"KPR_BWF_15",
+	"KPR_BWF_16",
+	"KPR_BWF_17",
+	"KPR_BWF_18",
+	"KPR_BWF_19",
+	"KPR_BWT_0",
+	"KPR_BWT_1",
+	"KPR_BWT_2",
+	"KPR_BWT_3",
+	"KPR_BWT_4",
+	"KPR_BWT_5",
+	"KPR_BWT_6",
+	"KPR_BWT_7",
+	"KPR_BWT_8",
+	"KPR_BWT_9",
+	"KPR_BWT_10",
+	"KPR_BWT_11",
+	"KPR_BWT_12",
+	"KPR_BWT_13",
+	"KPR_BWT_14",
+	"KPR_BWT_15",
+	"KPR_BWT_16",
+	"KPR_BWT_17",
+	"KPR_BWT_18",
+	"KPR_BWT_19",
+	"KPR_USA_0",
+	"KPR_USA_1",
+	"KPR_USA_2",
+	"KPR_USA_3",
+	"KPR_USA_4",
+	"KPR_USA_5",
+	"KPR_USA_6",
+	"KPR_USA_7",
+	"KPR_USA_8",
+	"KPR_USA_9",
+	"KPR_USA_10",
+	"KPR_USA_11",
+	"KPR_USA_12",
+	"KPR_USA_13",
+	"KPR_USA_14",
+	"KPR_USA_15",
+	"KPR_USA_16",
+	"KPR_USA_17",
+	"KPR_USA_18",
+	"KPR_USA_19",
+	"BWA3_insignia_00_soldat",
+	"BWA3_insignia_01_gefreiter",
+	"BWA3_insignia_02_obergefreiter",
+	"BWA3_insignia_03_hauptgefreiter",
+	"BWA3_insignia_04_stabsgefreiter",
+	"BWA3_insignia_05_oberstabsgefreiter",
+	"BWA3_insignia_06_unteroffizier",
+	"BWA3_insignia_07_stabsunteroffizier",
+	"BWA3_insignia_08_feldwebel",
+	"BWA3_insignia_09_oberfeldwebel",
+	"BWA3_insignia_10_hauptfeldwebel",
+	"BWA3_insignia_11_stabsfeldwebel",
+	"BWA3_insignia_12_oberstabsfeldwebel",
+	"BWA3_insignia_13_leutnant",
+	"BWA3_insignia_14_oberleutnant",
+	"BWA3_insignia_15_hauptmann",
+	"BWA3_insignia_16_stabshauptmann",
+	"BWA3_insignia_17_major",
+	"BWA3_insignia_18_oberstleutnant",
+	"BWA3_insignia_19_oberst",
 	"srifle_GM6_camo_F",
 	"arifle_Katiba_F",
 	"arifle_Katiba_GL_F",
@@ -1042,6 +1127,8 @@ KPLIB_transportConfigs = [
     ["RHS_Ural_Open_Flat_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["RHS_Ural_Open_MSV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["RHS_Ural_Open_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+    ["UK3CB_AAF_O_Ural_Open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+    ["UK3CB_AAF_O_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["RHS_Ural_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["rhsusf_M1084A1P2_WD_fmtv_usarmy", -6.5, [-0.1,0.65,0.3], [-0.1,-0.85,0.3], [-0.1,-2.31,0.3]],
     ["rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy", -6.5, [-0.1,0.65,-0.3], [-0.1,-0.85,-0.3], [-0.1,-2.31,-0.3]],
@@ -1097,7 +1184,7 @@ KPLIB_transportConfigs = [
     ["UK3CB_BAF_Merlin_HC4_18_GPMG_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC4_32_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC4_CSAR_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["USAF_C17",-10,[-1.2,14.4,-0.43],[-1.2,12.8,-0.43],[-1.2,11.1,-0.43],[-1.2,9.5,-0.43],[-1.2,7.9,-0.43],[-1.2,6.3,-0.43],[-1.2,4.6,-0.43],[-1.2,3,-0.43],[-1.2,1.4,-0.43],[-1.2,-0.1,-0.43],[-1.2,-1.8,-0.43],[1.2,14.4,-0.43],[1.2,12.8,-0.43],[1.2,11.2,-0.43],[1.2,9.6,-0.43],[1.2,7.9,-0.43],[1.2,6.3,-0.43],[1.2,4.7,-0.43],[1.2,3.1,-0.43],[1.2,1.5,-0.43],[1.2,0,-0.43],[1.2,-1.7,-0.43],[-1.2,14.5,1.22],[-1.2,12.8,1.22],[-1.2,11.2,1.2],[-1.2,9.5,1.22],[-1.2,7.9,1.22],[-1.2,6.3,1.22],[-1.2,4.7,1.22],[-1.2,3,1.22],[-1.2,1.4,1.22],[-1.2,-0.1,1.22],[-1.2,-1.7,1.22],[1.2,14.5,1.22],[1.2,12.8,1.22],[1.2,11.2,1.22],[1.2,9.6,1.22],[1.2,8,1.22],[1.2,6.3,1.22],[1.2,4.7,1.22],[1.2,3.1,1.22],[1.2,1.5,1.22],[1.2,0,1.22],[1.2,-1.6,1.22]],
+    ["USAF_C17",-10,[-1.2,14.4,-0.43],[-1.2,12.8,-0.43],[-1.2,11.1,-0.43],[-1.2,9.5,-0.43],[-1.2,7.9,-0.43],[-1.2,6.3,-0.43],[-1.2,4.6,-0.43],[-1.2,3,-0.43],[-1.2,1.4,-0.43],[-1.2,-0.1,-0.43],[-1.2,-1.8,-0.43],[1.2,14.4,-0.43],[1.2,12.8,-0.43],[1.2,11.2,-0.43],[1.2,9.6,-0.43],[1.2,7.9,-0.43],[1.2,6.3,-0.43],[1.2,4.7,-0.43],[1.2,3.1,-0.43],[1.2,1.5,-0.43],[1.2,0,-0.43],[1.2,-1.7,-0.43],[-1.2,14.5,1.22],[-1.2,12.8,1.22],[-1.2,11.2,1.15],[-1.2,9.5,1.22],[-1.2,7.9,1.22],[-1.2,6.3,1.22],[-1.2,4.7,1.22],[-1.2,3,1.22],[-1.2,1.4,1.22],[-1.2,-0.1,1.22],[-1.2,-1.7,1.22],[1.2,14.5,1.22],[1.2,12.8,1.22],[1.2,11.2,1.22],[1.2,9.6,1.22],[1.2,8,1.22],[1.2,6.3,1.22],[1.2,4.7,1.22],[1.2,3.1,1.22],[1.2,1.5,1.22],[1.2,0,1.22],[1.2,-1.6,1.22]],
     ["USAF_C130J",-10,[0,3.6,2.08],[0,2,2.08],[0,0.3,2.08],[0,-1.3,2.08]],
     ["USAF_C130J_Cargo",-10,[0,3.6,2.08],[0,2,2.08],[0,0.3,2.08],[0,-1.3,2.08],[0,5.3,2.08],[0,7,2.08]],
     ["uns_M35A2_Open", -5, [0,-0.6,0.1], [0,-2.3,0.1]],
@@ -1448,6 +1535,7 @@ KPLIB_intelBuildingClasses = [
     "Land_Cargo_HQ_V1_F",
     "Land_Cargo_HQ_V2_F",
     "Land_Cargo_HQ_V3_F",
+    "Land_Cargo_Tower_V1_F",
     "Land_i_Barracks_V1_dam_F",
     "Land_i_Barracks_V1_F",
     "Land_i_Barracks_V2_dam_F",
@@ -1457,107 +1545,110 @@ KPLIB_intelBuildingClasses = [
     "Land_MilOffices_V1_F",
     "Land_Research_house_V1_F",
     "Land_Research_HQ_F",
-    "Land_u_Barracks_V2_F"
+    "Land_u_Barracks_V2_F",
+    "Barrack2",
+    "Land_tent_east",
+    "Land_Barrack2"
 ];
 
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
-    [-5.59961,3.60938,0.1],
-    [-3.99902,3.60938,0.1],
-    [-2.39941,3.60938,0.1],
-    [-0.799805,3.60938,0.1],
-    [0.800781,3.60938,0.1],
-    [2.40039,3.60938,0.1],
-    [4.00098,3.60938,0.1],
-    [5.60059,3.60938,0.1],
-    [-5.59961,1.80859,0.1],
-    [-3.99902,1.80859,0.1],
-    [-2.39941,1.80859,0.1],
-    [-0.799805,1.80859,0.1],
-    [0.800781,1.80859,0.1],
-    [2.40039,1.80859,0.1],
-    [4.00098,1.80859,0.1],
-    [5.60059,1.80859,0.1],
-    [-5.59961,0.00976563,0.1],
-    [-3.99902,0.00976563,0.1],
-    [-2.39941,0.00976563,0.1],
-    [-0.799805,0.00976563,0.1],
-    [0.800781,0.00976563,0.1],
-    [2.40039,0.00976563,0.1],
-    [4.00098,0.00976563,0.1],
-    [5.60059,0.00976563,0.1],
-    [-5.59961,-1.79102,0.1],
-    [-3.99902,-1.79102,0.1],
-    [-2.39941,-1.79102,0.1],
-    [-0.799805,-1.79102,0.1],
-    [0.800781,-1.79102,0.1],
-    [2.40039,-1.79102,0.1],
-    [4.00098,-1.79102,0.1],
-    [5.60059,-1.79102,0.1],
-    [-5.59961,-3.58984,0.1],
-    [-3.99902,-3.58984,0.1],
-    [-2.39941,-3.58984,0.1],
-    [-0.799805,-3.58984,0.1],
-    [0.800781,-3.58984,0.1],
-    [2.40039,-3.58984,0.1],
-    [4.00098,-3.58984,0.1],
-    [5.60059,-3.58984,0.1],
-    [-5.59961,3.60938,1.6],
-    [-3.99902,3.60938,1.6],
-    [-2.39941,3.60938,1.6],
-    [-0.799805,3.60938,1.6],
-    [0.800781,3.60938,1.6],
-    [2.40039,3.60938,1.6],
-    [4.00098,3.60938,1.6],
-    [5.60059,3.60938,1.6],
-    [-5.59961,1.80859,1.6],
-    [-3.99902,1.80859,1.6],
-    [-2.39941,1.80859,1.6],
-    [-0.799805,1.80859,1.6],
-    [0.800781,1.80859,1.6],
-    [2.40039,1.80859,1.6],
-    [4.00098,1.80859,1.6],
-    [5.60059,1.80859,1.6],
-    [-5.59961,0.00976563,1.6],
-    [-3.99902,0.00976563,1.6],
-    [-2.39941,0.00976563,1.6],
-    [-0.799805,0.00976563,1.6],
-    [0.800781,0.00976563,1.6],
-    [2.40039,0.00976563,1.6],
-    [4.00098,0.00976563,1.6],
-    [5.60059,0.00976563,1.6],
-    [-5.59961,-1.79102,1.6],
-    [-3.99902,-1.79102,1.6],
-    [-2.39941,-1.79102,1.6],
-    [-0.799805,-1.79102,1.6],
-    [0.800781,-1.79102,1.6],
-    [2.40039,-1.79102,1.6],
-    [4.00098,-1.79102,1.6],
-    [5.60059,-1.79102,1.6],
-    [-5.59961,-3.58984,1.6],
-    [-3.99902,-3.58984,1.6],
-    [-2.39941,-3.58984,1.6],
-    [-0.799805,-3.58984,1.6],
-    [0.800781,-3.58984,1.6],
-    [2.40039,-3.58984,1.6],
-    [4.00098,-3.58984,1.6],
-    [5.60059,-3.58984,2.1]
+    [-5.59961,3.60938,0],
+    [-3.99902,3.60938,0],
+    [-2.39941,3.60938,0],
+    [-0.799805,3.60938,0],
+    [0.800781,3.60938,0],
+    [2.40039,3.60938,0],
+    [4.00098,3.60938,0],
+    [5.60059,3.60938,0],
+    [-5.59961,1.80859,0],
+    [-3.99902,1.80859,0],
+    [-2.39941,1.80859,0],
+    [-0.799805,1.80859,0],
+    [0.800781,1.80859,0],
+    [2.40039,1.80859,0],
+    [4.00098,1.80859,0],
+    [5.60059,1.80859,0],
+    [-5.59961,0.00976563,0],
+    [-3.99902,0.00976563,0],
+    [-2.39941,0.00976563,0],
+    [-0.799805,0.00976563,0],
+    [0.800781,0.00976563,0],
+    [2.40039,0.00976563,0],
+    [4.00098,0.00976563,0],
+    [5.60059,0.00976563,0],
+    [-5.59961,-1.79102,0],
+    [-3.99902,-1.79102,0],
+    [-2.39941,-1.79102,0],
+    [-0.799805,-1.79102,0],
+    [0.800781,-1.79102,0],
+    [2.40039,-1.79102,0],
+    [4.00098,-1.79102,0],
+    [5.60059,-1.79102,0],
+    [-5.59961,-3.58984,0],
+    [-3.99902,-3.58984,0],
+    [-2.39941,-3.58984,0],
+    [-0.799805,-3.58984,0],
+    [0.800781,-3.58984,0],
+    [2.40039,-3.58984,0],
+    [4.00098,-3.58984,0],
+    [5.60059,-3.58984,0],
+    [-5.59961,3.60938,1.15],
+    [-3.99902,3.60938,1.15],
+    [-2.39941,3.60938,1.15],
+    [-0.799805,3.60938,1.15],
+    [0.800781,3.60938,1.15],
+    [2.40039,3.60938,1.15],
+    [4.00098,3.60938,1.15],
+    [5.60059,3.60938,1.15],
+    [-5.59961,1.80859,1.15],
+    [-3.99902,1.80859,1.15],
+    [-2.39941,1.80859,1.15],
+    [-0.799805,1.80859,1.15],
+    [0.800781,1.80859,1.15],
+    [2.40039,1.80859,1.15],
+    [4.00098,1.80859,1.15],
+    [5.60059,1.80859,1.15],
+    [-5.59961,0.00976563,1.15],
+    [-3.99902,0.00976563,1.15],
+    [-2.39941,0.00976563,1.15],
+    [-0.799805,0.00976563,1.15],
+    [0.800781,0.00976563,1.15],
+    [2.40039,0.00976563,1.15],
+    [4.00098,0.00976563,1.15],
+    [5.60059,0.00976563,1.15],
+    [-5.59961,-1.79102,1.15],
+    [-3.99902,-1.79102,1.15],
+    [-2.39941,-1.79102,1.15],
+    [-0.799805,-1.79102,1.15],
+    [0.800781,-1.79102,1.15],
+    [2.40039,-1.79102,1.15],
+    [4.00098,-1.79102,1.15],
+    [5.60059,-1.79102,1.15],
+    [-5.59961,-3.58984,1.15],
+    [-3.99902,-3.58984,1.15],
+    [-2.39941,-3.58984,1.15],
+    [-0.799805,-3.58984,1.15],
+    [0.800781,-3.58984,1.15],
+    [2.40039,-3.58984,1.15],
+    [4.00098,-3.58984,1.15],
+    [5.60059,-3.58984,1.15]
 ];
 
 // Small storage area placement position offsets.
 KP_liberation_small_storage_positions = [
-    [-2.34961,1.80078,0.6],
-    [-0.75,1.80078,0.6],
-    [0.850586,1.80078,0.6],
-    [2.4502,1.80078,0.6],
-    [-2.34961,0,0.6],
-    [-0.75,0,0.6],
-    [0.850586,0,0.6],
-    [2.4502,0,0.6],
-    [-2.34961,-1.79883,0.6],
-    [-0.75,-1.79883,0.6],
-    [0.850586,-1.79883,0.6],
-    [2.4502,-1.79883,0.6]
+    [-2.34961,1.80078,0],
+    [-0.75,1.80078,0],
+    [0.850586,1.80078,0],
+    [2.4502,1.80078,0],
+    [-2.34961,0,0],
+    [-0.75,0,0],
+    [0.850586,0,0],
+    [2.4502,0,0],
+    [-2.34961,-1.79883,0],
+    [-0.75,-1.79883,0],
+    [0.850586,-1.79883,0],
+    [2.4502,-1.79883,0]
 ];
 
 // DO NOT CHANGE (unless you know what you are doing).

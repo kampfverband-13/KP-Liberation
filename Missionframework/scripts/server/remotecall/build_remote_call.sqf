@@ -67,7 +67,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
         {
             _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
             detach _x;
-            _x attachTo [_area, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
+            _x attachTo [_area, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, ((_storage_positions select _i) select 2) + _height]];
             _i = _i + 1;
         } forEach attachedObjects (_x);
 

@@ -24,10 +24,10 @@ if (_crateClass isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_erro
 private _height = 0;
 
 switch (_crateClass) do {
-    case KP_liberation_supply_crate: {_height = 0.4;};
-    case KP_liberation_ammo_crate: {_height = 0.6;};
-    case KP_liberation_fuel_crate: {_height = 0.3;};
-    default {_height = 0.6;};
+    case KP_liberation_supply_crate: {_height = 0.3;}; //0.4
+    case KP_liberation_ammo_crate: {_height = 0.1;}; //0.6
+    case KP_liberation_fuel_crate: {_height = 0.3;}; //0.3
+    default {_height = 0.3;}; //0.6
 };
 
 _height

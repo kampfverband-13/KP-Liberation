@@ -25,7 +25,7 @@ FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This 
 FOB_truck_typename = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
 Arsenal_typename = "B_CargoNet_01_ammo_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "B_Truck_01_medical_F";                        // This is the mobile respawn (and medical) truck.
-huron_typename = "RHS_UH1Y_UNARMED_d";                       // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
+huron_typename = "RHS_CH_47F_cargo";                       // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "B_soldier_LAT_F";                                         // This defines the crew for vehicles.
 pilot_classname = "B_soldier_LAT_F";                                      // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "B_Heli_Transport_03_unarmed_F";              // These are the little birds which spawn on the Freedom or at Chimera base.
@@ -50,10 +50,20 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-	["B_soldier_LAT_F",5,5,0]
+	["rhsusf_usmc_marpat_wd_rifleman_m4",5,5,0],
+	["rhsusf_usmc_marpat_wd_rifleman",5,6,0],
+	["rhsusf_usmc_marpat_wd_grenadier",8,8,0],
+	["rhsusf_usmc_marpat_wd_autorifleman_m249",10,10,0],
+	["rhsusf_usmc_marpat_wd_machinegunner",10,12,0],
+	["rhsusf_usmc_marpat_wd_smaw",15,15,0],
+	["rhsusf_usmc_marpat_wd_stinger",15,15,0],
+	["rhsusf_usmc_marpat_wd_sniper_m110",18,18,0],
+	["rhsusf_usmc_marpat_wd_sniper",18,20,0]
 ];
 
 light_vehicles = [
+    ["UK3CB_C_OLD_BIKE",0,0,0],
+    ["UK3CB_ADC_C_TT650",25,0,25],
     ["B_Boat_Transport_01_F",50,0,50],
     ["rhs_bmk_t",50,0,50],
     ["I_C_Boat_Transport_02_F",100,0,100],
@@ -90,6 +100,7 @@ heavy_vehicles = [
     ["RHS_M2A3_wd",1200,1200,1100],
     ["rhs_bmp2d_msv",1000,1500,1100],
     ["rhs_zsu234_aa",1000,1100,1000],
+    ["UK3CB_O_2S6M_Tunguska_VPV",1000,1500,1000],
     ["RHS_M6_wd",1200,1100,1100],
     ["rhs_t90a_tv",2000,1800,1800],
     ["BWA3_Leopard2_Fleck",2000,2000,2000],
@@ -97,6 +108,7 @@ heavy_vehicles = [
     ["rhs_t14_tv",2000,2100,2000],
     ["RHS_M119_WD",4000,4000,2000],
     ["rhs_D30_msv",4000,4500,2000],
+    ["UK3CB_CW_US_B_LATE_M109",5500,5000,4000],
     ["B_Truck_01_transport_F",2000,0,2000]
 ];
 
@@ -118,9 +130,9 @@ air_vehicles = [
     ["RHS_AH1Z_wd",2000,2300,2000],
     ["RHS_AH64D_wd",2000,2600,2000],
     ["rhsgref_mi24g_CAS",2400,2000,2000],
-    ["rhsusf_f22",3000,2500,2800],
-    ["rhs_mig29sm_vvsc",2800,2700,2800],
-    ["I_Plane_Fighter_03_dynamicLoadout_F",2800,3000,2800],
+    ["rhsusf_f22",3000,2800,2800],
+    ["rhs_mig29sm_vvsc",2800,3000,2800],
+    ["I_Plane_Fighter_03_dynamicLoadout_F",2800,2800,2800],
     ["RHS_Su25SM_vvsc",3000,3600,3000],
     ["B_Plane_CAS_01_dynamicLoadout_F",3000,4000,3000],
     ["RHS_A10",3000,4000,3000]
@@ -145,6 +157,8 @@ buildings = [
     ["Land_CampingTable_F",0,0,0],
     ["Land_HBarrier_01_wall_6_green_F",0,0,0],
     ["Land_HBarrierWall6_F",0,0,0],
+    ["Land_fort_bagfence_long",0,0,0],
+    ["UK3CB_CW_US_B_LATE_M240_nest",200,200,0],
     ["Land_HelipadCivil_F",0,0,0],  
     ["PortableHelipadLight_01_blue_F",0,0,0],
     ["PortableHelipadLight_01_green_F",0,0,0],
@@ -189,80 +203,61 @@ support_vehicles = [
 
 // Light infantry squad.
 blufor_squad_inf_light = [
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F"
+	"rhsusf_usmc_marpat_wd_rifleman_m4",
+	"rhsusf_usmc_marpat_wd_rifleman_m4",
+	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_usmc_marpat_wd_grenadier",
+	"rhsusf_usmc_marpat_wd_grenadier",
+	"rhsusf_usmc_marpat_wd_autorifleman_m249",
+	"rhsusf_usmc_marpat_wd_sniper_m110"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F"
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_grenadier",
+    "rhsusf_usmc_marpat_wd_grenadier",
+    "rhsusf_usmc_marpat_wd_autorifleman_m249",
+    "rhsusf_usmc_marpat_wd_machinegunner",
+    "rhsusf_usmc_marpat_wd_smaw",
+    "rhsusf_usmc_marpat_wd_stinger",
+    "rhsusf_usmc_marpat_wd_sniper"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F"
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_smaw",
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_smaw"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F"
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_stinger",
+    "rhsusf_usmc_marpat_wd_rifleman",
+    "rhsusf_usmc_marpat_wd_stinger"
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F"
+    "rhsusf_usmc_marpat_wd_sniper_m110",
+    "rhsusf_usmc_marpat_wd_sniper"
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F",
-    "B_soldier_LAT_F"
+	"rhsusf_usmc_marpat_wd_rifleman_m4",
+	"rhsusf_usmc_marpat_wd_rifleman_m4",
+	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_usmc_marpat_wd_grenadier",
+	"rhsusf_usmc_marpat_wd_grenadier",
+	"rhsusf_usmc_marpat_wd_autorifleman_m249",
+	"rhsusf_usmc_marpat_wd_sniper_m110"
 ];
 
 
