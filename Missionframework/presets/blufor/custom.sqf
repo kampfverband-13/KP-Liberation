@@ -83,6 +83,7 @@ light_vehicles = [
     ["rhsusf_m1045_w_s",300,500,300],
     ["rhsusf_M1230_M2_usarmy_wd",400,150,400],
     ["rhsusf_M1237_M2_usarmy_wd",400,150,400],
+	["UK3CB_CW_US_B_LATE_AAV",500,0,400],
     ["BWA3_Dingo2_FLW100_MG3_Fleck",500,200,600],
     ["BWA3_Dingo2_FLW200_GMW_Fleck",500,300,600],
     ["BWA3_Dingo2_FLW200_M2_Fleck",500,300,600],
@@ -108,6 +109,7 @@ heavy_vehicles = [
     ["rhsusf_m1a2sep2wd_usarmyy",2000,2000,2000],
     ["rhs_t14_tv",2000,2100,2000],
     ["RHS_M119_WD",4000,4000,2000],
+	["UK3CB_CW_SOV_O_LATE_2S3",4000,4000,2000],
     ["rhs_D30_msv",4000,4500,2000],
     ["UK3CB_CW_US_B_LATE_M109",5500,5000,4000],
     ["B_Truck_01_transport_F",2000,0,2000]
