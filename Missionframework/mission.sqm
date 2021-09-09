@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6527;
+		nextID=6593;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=253;
+		nextID=265;
 	};
 	class Camera
 	{
-		pos[]={17969.24,43.36689,17932.291};
-		dir[]={-1.2363448e-007,-0.70710671,0.70710683};
-		up[]={-1.2363445e-007,0.70710683,0.70710659};
-		aside[]={0.99999988,7.1054274e-015,1.7484552e-007};
+		pos[]={13919.993,22.37985,11244.325};
+		dir[]={0.33227384,-0.10751576,0.93716139};
+		up[]={0.03599146,0.9941529,0.10151371};
+		aside[]={0.94261283,-4.8091169e-007,-0.33420977};
 	};
 };
 binarizationWanted=0;
-sourceName="liberation";
+sourceName="liberation_virolathi";
 addons[]=
 {
 	"A3_Ui_F",
@@ -372,7 +372,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=50;
+		items=51;
 		class Item0
 		{
 			dataType="Layer";
@@ -2502,7 +2502,7 @@ class Mission
 					name="opfor_point_231";
 					type="Empty";
 					id=1344;
-					atlOffset=7.5320339;
+					atlOffset=8.4480782;
 				};
 				class Item132
 				{
@@ -84090,6 +84090,16 @@ class Mission
 			};
 			id=6524;
 			type="UK3CB_AAF_O_ZU23";
+		};
+		class Item50
+		{
+			dataType="Group";
+			side="West";
+			class Attributes
+			{
+			};
+			id=6574;
+			atlOffset=22.049999;
 		};
 	};
 };
