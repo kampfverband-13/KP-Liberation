@@ -79,7 +79,6 @@ light_vehicles = [
     ["rhs_tigr_3camo_msv",170,0,170],
     ["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy",100,0,100],
     ["rhs_kamaz5350_open_msv",100,0,100],
-    ["UK3CB_BAF_MAN_HX58_Cargo_Green_A_DPMW_RM",100,0,100],
     ["RHS_Ural_MSV_01",100,0,100],
     ["rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy",300,100,300],
     ["rhsusf_M977A4_BKIT_M2_usarmy_wd",400,100,800],
@@ -104,7 +103,8 @@ light_vehicles = [
     ["I_LT_01_AT_F",550,900,300],
     ["I_LT_01_AA_F",550,900,300],
 	["rhsusf_stryker_m1134_wd",650,900,450],
-    ["UK3CB_BAF_FV432_Mk3_RWS_Green_DPMW_RM",700,700,500]
+    ["UK3CB_BAF_FV432_Mk3_RWS_Green_DPMW_RM",700,700,500],
+    ["UK3CB_BAF_MAN_HX58_Cargo_Green_A_DPMW_RM",1500,0,1500]
 ];
 
 
@@ -181,7 +181,8 @@ buildings = [
     ["Land_HelipadCivil_F",0,0,0],  
     ["PortableHelipadLight_01_blue_F",0,0,0],
     ["PortableHelipadLight_01_green_F",0,0,0],
-    ["Land_ClutterCutter_large_F",0,0,0]
+    ["Land_ClutterCutter_large_F",0,0,0],
+    ["UK3CB_BAF_Vehicles_Logistics_Point",0,0,0]
 ];
 
 

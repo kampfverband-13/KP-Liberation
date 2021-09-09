@@ -1013,9 +1013,8 @@ KP_liberation_allowed_items_extension = [
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
 KPLIB_transportConfigs = [
-
-UK3CB_BAF_Merlin_HC3_CSAR_DPMW_RM
-	["UK3CB_BAF_Merlin_HC3_CSAR_DPMW_RM", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
+	["UK3CB_BAF_Merlin_HC3_CSAR_DPMW_RM", -8, [0.15,-0.4,-1.8], [0.15,1.4,-1.8], [0.15,3.2,-1.8], [0.15,5,-1.8]],
+	["UK3CB_BAF_MAN_HX58_Cargo_Green_A_DPMW_RM", -3, [-0.65,0,-0.6], [-0.65,1.6,-0.6], [-0.65,3.2,-0.6], [-0.65,4.8,-0.6],[0.8,0,-0.6], [0.8,1.6,-0.6], [0.8,3.2,-0.6], [0.8,4.8,-0.6]],
     ["B_Heli_Transport_03_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_Heli_Transport_03_unarmed_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_T_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
