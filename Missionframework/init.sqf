@@ -147,6 +147,30 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle, true, [0, 3, 0], 0] call ace_dragging_fnc_setDraggable;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
+["UK3CB_NFA_B_Old_Bike", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle,2] call ace_cargo_fnc_setSize;
+	[_vehicle,2] call ace_cargo_fnc_setSpace;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["UK3CB_NFA_B_MMT", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle,2] call ace_cargo_fnc_setSize;
+	[_vehicle,2] call ace_cargo_fnc_setSpace;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["UK3CB_B_M1030_USMC_WDL", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle,3] call ace_cargo_fnc_setSize;
+	[_vehicle,2] call ace_cargo_fnc_setSpace;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 ["I_C_Boat_Transport_02_F", "InitPost", {
     params ["_vehicle"];
 	[_vehicle,4] call ace_cargo_fnc_setSpace;
@@ -228,6 +252,89 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     params ["_vehicle"];
 	clearItemCargoGlobal _vehicle;
 	_vehicle addAction	["Endheilen",{ params ["_target", "_caller", "_actionId", "_arguments"]; [_caller,true] execVM "MilSimUnited\heal.sqf";},nil,1.5,false,true,"","true",5,false,"",""];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhsusf_socom_marsoc_sarc", "InitPost", {
+	params ["_vehicle"];
+	_vehicle setSpeaker "NoVoice";
+	_vehicle setUnitTrait ["Medic",true];
+	_vehicle setUnitTrait ["Engineer",true];
+	_vehicle setUnitTrait ["explosiveSpecialist",true];
+	_vehicle setVariable ["ACE_medical_medicClass", 1];
+	_vehicle setVariable ["ACE_isEngineer", 1];
+	_vehicle setUnitAbility 2;
+	_vehicle setVariable ["ACE_CanSwitchUnits", true];
+	
+	removeHeadgear _vehicle;
+	removeBackpack _vehicle;
+	
+	_vehicle addPrimaryWeaponItem "rhsusf_acc_rotex5_grey";
+
+	_vehicle addBackpack "B_Kitbag_cbr";
+	for "_i" from 1 to 4 do {_vehicle addItemToBackpack "ACE_tourniquet";};
+	for "_i" from 1 to 2 do {_vehicle addItemToBackpack "ACE_splint";};
+	for "_i" from 1 to 20 do {_vehicle addItemToBackpack "ACE_packingBandage";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_salineIV";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_epinephrine";};
+	_vehicle addItemToBackpack "ACE_surgicalKit";
+	_vehicle addHeadgear "rhsusf_mich_bare_norotos_arc_alt_headset";
+	
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["BWA3_Medic_Fleck", "InitPost", {
+	params ["_vehicle"];
+	_vehicle setSpeaker "NoVoice";
+	_vehicle setUnitTrait ["Medic",true];
+	_vehicle setUnitTrait ["Engineer",true];
+	_vehicle setUnitTrait ["explosiveSpecialist",true];
+	_vehicle setVariable ["ACE_medical_medicClass", 1];
+	_vehicle setVariable ["ACE_isEngineer", 1];
+	_vehicle setUnitAbility 2;
+	_vehicle setVariable ["ACE_CanSwitchUnits", true];
+	
+	_vehicle addPrimaryWeaponItem "rhsusf_acc_rotex5_grey";
+	
+	removeHeadgear _vehicle;
+	for "_i" from 1 to 4 do {_vehicle addItemToBackpack "ACE_tourniquet";};
+	for "_i" from 1 to 2 do {_vehicle addItemToBackpack "ACE_splint";};
+	for "_i" from 1 to 20 do {_vehicle addItemToBackpack "ACE_packingBandage";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_salineIV";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_epinephrine";};
+	_vehicle addItemToBackpack "ACE_surgicalKit";
+	_vehicle addHeadgear "rhsgref_helmet_pasgt_flecktarn";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhs_msv_emr_medic", "InitPost", {
+	params ["_vehicle"];
+	_vehicle setSpeaker "NoVoice";
+	_vehicle setUnitTrait ["Medic",true];
+	_vehicle setUnitTrait ["Engineer",true];
+	_vehicle setUnitTrait ["explosiveSpecialist",true];
+	_vehicle setVariable ["ACE_medical_medicClass", 1];
+	_vehicle setVariable ["ACE_isEngineer", 1];
+	_vehicle setUnitAbility 2;
+	_vehicle setVariable ["ACE_CanSwitchUnits", true];
+	
+	_vehicle addPrimaryWeaponItem "rhs_acc_dtk4short";
+	
+	_vehicle addVest "rhs_6b45_rifleman";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	_vehicle addItemToVest "rhs_mag_rgn";
+	
+	removeBackpack _vehicle;
+	_vehicle addBackpack "rhs_rk_sht_30_emr_medic";
+	for "_i" from 1 to 4 do {_vehicle addItemToBackpack "ACE_tourniquet";};
+	for "_i" from 1 to 2 do {_vehicle addItemToBackpack "ACE_splint";};
+	for "_i" from 1 to 20 do {_vehicle addItemToBackpack "ACE_packingBandage";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_salineIV";};
+	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_epinephrine";};
+	_vehicle addItemToBackpack "ACE_surgicalKit";
+	
+	_vehicle linkItem "NVGoggles_OPFOR";
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 
