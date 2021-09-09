@@ -264,7 +264,9 @@ KP_liberation_commander_actions = [
 	"76561198004905141", // Befubo
 	"76561198091902766", // Breacher
 	"76561198046297709", // Deusit
-	"76561198208098453" // Nordmann
+	"76561198208098453", // Nordmann
+	"76561198118272682", // Blackdog
+	"76561198067391792" // OnlyBone
 ];
 
 /* Whitelist for BI support framework access.
@@ -936,13 +938,8 @@ blacklisted_from_arsenal = [
     "TFAR_anprc148jem",
     "TFAR_fadak",
     "TFAR_microdagr",
-    "B_RadioBag_01_black_F",
     "B_RadioBag_01_digi_F",
-    "B_RadioBag_01_eaf_F",
-    "B_RadioBag_01_mtp_F",
-    "B_RadioBag_01_tropic_F",
     "B_RadioBag_01_oucamo_F",
-    "B_RadioBag_01_wdl_F",
     "O_Static_Designator_02_weapon_F",
     "B_Static_Designator_01_weapon_F",
     "B_W_Static_Designator_01_weapon_F",
