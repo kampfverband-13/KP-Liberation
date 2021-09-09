@@ -50,20 +50,24 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-	["rhsusf_usmc_marpat_wd_rifleman_m4",5,5,0],
-	["rhsusf_usmc_marpat_wd_rifleman",5,6,0],
-	["rhsusf_usmc_marpat_wd_grenadier",8,8,0],
-	["rhsusf_usmc_marpat_wd_autorifleman_m249",10,10,0],
-	["rhsusf_usmc_marpat_wd_machinegunner",10,12,0],
-	["rhsusf_usmc_marpat_wd_smaw",15,15,0],
-	["rhsusf_usmc_marpat_wd_stinger",15,15,0],
-	["rhsusf_usmc_marpat_wd_sniper_m110",18,18,0],
-	["rhsusf_usmc_marpat_wd_sniper",18,20,0]
+	["rhsusf_socom_marsoc_sarc",5,5,5],
+	["BWA3_Medic_Fleck",5,5,5],
+	["rhs_msv_emr_medic",5,5,5],
+	["rhsusf_usmc_marpat_wd_rifleman_m4",5,5,5],
+	["rhsusf_usmc_marpat_wd_rifleman",5,5,5],
+	["rhsusf_usmc_marpat_wd_grenadier",5,5,5],
+	["rhsusf_usmc_marpat_wd_autorifleman_m249",5,5,5],
+	["rhsusf_usmc_marpat_wd_machinegunner",5,5,5],
+	["rhsusf_usmc_marpat_wd_smaw",5,5,5],
+	["rhsusf_usmc_marpat_wd_stinger",5,5,5],
+	["rhsusf_usmc_marpat_wd_sniper_m110",5,5,5],
+	["rhsusf_usmc_marpat_wd_sniper",5,5,5]
 ];
 
 light_vehicles = [
-    ["UK3CB_C_OLD_BIKE",0,0,0],
-    ["UK3CB_ADC_C_TT650",25,0,25],
+    ["UK3CB_NFA_B_Old_Bike",0,0,0],
+    ["UK3CB_NFA_B_MMT",0,0,0],
+    ["UK3CB_B_M1030_USMC_WDL",25,0,25],
     ["B_Boat_Transport_01_F",50,0,50],
     ["rhs_bmk_t",50,0,50],
     ["I_C_Boat_Transport_02_F",100,0,100],
@@ -208,60 +212,62 @@ support_vehicles = [
 // Light infantry squad.
 blufor_squad_inf_light = [
 	"rhsusf_usmc_marpat_wd_rifleman_m4",
-	"rhsusf_usmc_marpat_wd_rifleman_m4",
-	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_socom_marsoc_sarc",
 	"rhsusf_usmc_marpat_wd_rifleman",
 	"rhsusf_usmc_marpat_wd_grenadier",
 	"rhsusf_usmc_marpat_wd_grenadier",
 	"rhsusf_usmc_marpat_wd_autorifleman_m249",
-	"rhsusf_usmc_marpat_wd_sniper_m110"
+	"rhsusf_usmc_marpat_wd_sniper_m110",
+	"rhsusf_socom_marsoc_sarc"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
     "rhsusf_usmc_marpat_wd_rifleman",
-    "rhsusf_usmc_marpat_wd_rifleman",
-    "rhsusf_usmc_marpat_wd_grenadier",
     "rhsusf_usmc_marpat_wd_grenadier",
     "rhsusf_usmc_marpat_wd_autorifleman_m249",
+    "rhsusf_socom_marsoc_sarc",
     "rhsusf_usmc_marpat_wd_machinegunner",
     "rhsusf_usmc_marpat_wd_smaw",
     "rhsusf_usmc_marpat_wd_stinger",
-    "rhsusf_usmc_marpat_wd_sniper"
+    "rhsusf_usmc_marpat_wd_sniper", 
+    "rhsusf_socom_marsoc_sarc"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
-    "rhsusf_usmc_marpat_wd_rifleman",
     "rhsusf_usmc_marpat_wd_smaw",
-    "rhsusf_usmc_marpat_wd_rifleman",
-    "rhsusf_usmc_marpat_wd_smaw"
+    "rhsusf_socom_marsoc_sarc",
+    "rhsusf_usmc_marpat_wd_smaw",
+    "rhsusf_socom_marsoc_sarc"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
-    "rhsusf_usmc_marpat_wd_rifleman",
     "rhsusf_usmc_marpat_wd_stinger",
-    "rhsusf_usmc_marpat_wd_rifleman",
-    "rhsusf_usmc_marpat_wd_stinger"
+    "rhsusf_socom_marsoc_sarc",
+    "rhsusf_usmc_marpat_wd_stinger",
+    "rhsusf_socom_marsoc_sarc"
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
     "rhsusf_usmc_marpat_wd_sniper_m110",
-    "rhsusf_usmc_marpat_wd_sniper"
+    "rhsusf_usmc_marpat_wd_sniper",
+    "rhsusf_socom_marsoc_sarc"
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
-	"rhsusf_usmc_marpat_wd_rifleman_m4",
-	"rhsusf_usmc_marpat_wd_rifleman_m4",
-	"rhsusf_usmc_marpat_wd_rifleman",
-	"rhsusf_usmc_marpat_wd_rifleman",
 	"rhsusf_usmc_marpat_wd_grenadier",
+	"rhsusf_usmc_marpat_wd_rifleman_m4",
+	"rhsusf_usmc_marpat_wd_rifleman",
+	"rhsusf_socom_marsoc_sarc",
+	"rhsusf_usmc_marpat_wd_rifleman",
 	"rhsusf_usmc_marpat_wd_grenadier",
 	"rhsusf_usmc_marpat_wd_autorifleman_m249",
-	"rhsusf_usmc_marpat_wd_sniper_m110"
+	"rhsusf_usmc_marpat_wd_sniper_m110",
+	"rhsusf_socom_marsoc_sarc"
 ];
 
 
