@@ -5,20 +5,21 @@ if (isServer) then
 	_score = 20;
 	switch (true) do
 		{
-		case (_liberated_sector in sectors_bigtown):    {_score = 50; [] spawn gain_resources; [] spawn gain_resources; [] spawn gain_resources;};
-		case (_liberated_sector in sectors_capture):    {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
-		case (_liberated_sector in sectors_military):   {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
-		case (_liberated_sector in sectors_factory):    {_score = 30; [] spawn gain_resources; [] spawn gain_resources;};
-		case (_liberated_sector in sectors_tower):      {_score = 20; [] spawn gain_resources;};
+		case (_liberated_sector in sectors_bigtown): { _score = 50; [3] spawn gain_resources; };
+		case (_liberated_sector in sectors_capture): { _score = 30; [2] spawn gain_resources; };
+		case (_liberated_sector in sectors_military): { _score = 30; [2] spawn gain_resources; };
+		case (_liberated_sector in sectors_factory): { _score = 30; [2] spawn gain_resources; };
+		case (_liberated_sector in sectors_tower): { _score = 20; [1] spawn gain_resources; };
 		};
-	[]execVM "MilSimUnited\roadblocks.sqf"; 
+		
+	/* [] spawn roadblocks; */
 	
 	_headlessClients = entities 'HeadlessClient_F';
 	_humanPlayers = allPlayers - _headlessClients;
 	
 	{
 		_uid = getPlayerUID _x;
-		[_uid,_score] call KPR_fnc_addScore
+		[_uid,_score] spawn KPR_fnc_addScore
 	} foreach _humanPlayers;
 	
 	};
