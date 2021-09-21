@@ -580,32 +580,6 @@ ieds = compileFinal "
 ";
 
 
-liberate_sector = compileFinal "
-	
-	params ['_liberated_sector'];
-	
-	if (isServer) then {
-		_score = 20;
-		switch (true) do {
-			case (_liberated_sector in sectors_bigtown): { _score = 50; [3] spawn gain_resources; };
-			case (_liberated_sector in sectors_capture): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_military): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_factory): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_tower): { _score = 20; [1] spawn gain_resources; };
-		};
-		
-		_headlessClients = entities 'HeadlessClient_F';
-		_humanPlayers = allPlayers - _headlessClients;
-		
-		{
-			_uid = getPlayerUID _x;
-			[_uid,_score] spawn KPR_fnc_addScore
-		} foreach _humanPlayers;
-		
-	};
-";
-
-
 activeRoadblock = [];
 sleep 15;
 //RESTORE RULEBORD TEXTURE ON FOBs
