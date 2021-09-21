@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=265;
+		nextID=277;
 	};
 	class Camera
 	{
-		pos[]={17959.988,36.095238,17940.293};
-		dir[]={0.50268602,-0.45879063,0.73268312};
-		up[]={0.2595557,0.88854289,0.3783119};
-		aside[]={0.82458824,-1.8386345e-007,-0.56573963};
+		pos[]={17969.576,28.77247,17957.652};
+		dir[]={0.55956072,-0.4007549,0.72546434};
+		up[]={0.24476227,0.91618121,0.31733191};
+		aside[]={0.79183215,2.2570021e-007,-0.61074895};
 	};
 };
 binarizationWanted=0;
@@ -5564,7 +5564,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Operations Base";
-			state=1;
 			class Entities
 			{
 				items=46;
@@ -5589,17 +5588,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17809.293,8.655159,159.29306};
-						angles[]={0,3.4020684,0};
+						position[]={17809.293,8.038867,159.29306};
+						angles[]={-0,3.4020684,-0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						name="base_boxspawn";
 					};
 					id=1909;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=0.616292;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5629,17 +5628,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17821.387,8.6829243,155.91122};
-						angles[]={0,0.23208049,0};
+						position[]={17821.387,8.035677,155.91122};
+						angles[]={-0,0.23208049,-0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						name="huronspawn";
 					};
 					id=1910;
 					type="Land_ClutterCutter_small_F";
-					atlOffset=0.64724731;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5921,8 +5920,7 @@ class Mission
 					angle=4.9923401;
 					class Attributes
 					{
-						condition="call{this}";
-						onActivation="call{[thisList,false] execVM ""MilSimUnited\heal.sqf"";}";
+						onActivation="[thisList,false] execVM ""MilSimUnited\heal.sqf"";";
 						sizeA=5;
 						sizeB=5;
 						sizeC=5;
@@ -5930,7 +5928,6 @@ class Mission
 						repeatable=1;
 						activationBy="ANYPLAYER";
 						isRectangle=1;
-						isServerOnly=1;
 					};
 					id=1922;
 					type="EmptyDetectorArea10x10";
