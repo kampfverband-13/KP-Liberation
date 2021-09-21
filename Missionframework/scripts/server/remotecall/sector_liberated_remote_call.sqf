@@ -1,28 +1,6 @@
 params ["_liberated_sector"];
 
-if (isServer) then
-	{
-	_score = 20;
-	switch (true) do
-		{
-		case (_liberated_sector in sectors_bigtown): { _score = 50; [3] spawn gain_resources; };
-		case (_liberated_sector in sectors_capture): { _score = 30; [2] spawn gain_resources; };
-		case (_liberated_sector in sectors_military): { _score = 30; [2] spawn gain_resources; };
-		case (_liberated_sector in sectors_factory): { _score = 30; [2] spawn gain_resources; };
-		case (_liberated_sector in sectors_tower): { _score = 20; [1] spawn gain_resources; };
-		};
-		
-	/* [] spawn roadblocks; */
-	
-	_headlessClients = entities 'HeadlessClient_F';
-	_humanPlayers = allPlayers - _headlessClients;
-	
-	{
-		_uid = getPlayerUID _x;
-		[_uid,_score] spawn KPR_fnc_addScore
-	} foreach _humanPlayers;
-	
-	};
+[_liberated_sector] spawn liberate_sector;
 	
 private _combat_readiness_increase = 0;
 switch (true) do {
