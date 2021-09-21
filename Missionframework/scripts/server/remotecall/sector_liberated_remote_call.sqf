@@ -1,8 +1,6 @@
 params ["_liberated_sector"];
 
-
 [_liberated_sector] spawn liberate_sector;
-
 	
 private _combat_readiness_increase = 0;
 switch (true) do {
