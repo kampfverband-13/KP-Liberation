@@ -7,7 +7,6 @@ if(_condition) then {
 } else {
 	{
 		[_x] call ACE_medical_treatment_fnc_fullHealLocal;
-		hint format ["%1 healed!",_x];
-		sleep 1;
+		sleep 0.1;
 	} foreach _unit;
 };
