@@ -114,6 +114,9 @@ if (isServer) then {
                 // Killed by a player
                 if (isplayer _killer) then {
                     stats_resistance_teamkills_by_players = stats_resistance_teamkills_by_players + 1;
+                    _uid = getPlayerUID _killer;
+                    _penalty = -10;
+                    [_uid,_penalty] call KPR_fnc_addScore;
                 };
             };
         };
@@ -132,6 +135,9 @@ if (isServer) then {
             // Killed by a player
             if (isPlayer _killer) then {
                 stats_civilians_killed_by_players = stats_civilians_killed_by_players + 1;
+                _uid = getPlayerUID _killer;
+                _penalty = -20;
+                [_uid,_penalty] call KPR_fnc_addScore;
             };
         };
     } else {
