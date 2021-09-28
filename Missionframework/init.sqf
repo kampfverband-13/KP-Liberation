@@ -365,6 +365,10 @@ SA_TOW_RULES_OVERRIDE =[
 
 if (isServer) then {[2000,-1,false,100,1000,100]execvm "zbe_cache\main.sqf"};
 
+//Variables for playerLogging
+MSU_civ_kills = profileNamespace getVariable ["MSU_civ_kills",[]];
+
+
 // MilSimUnited ===========================================================================
 
 KPLIB_init = true;
