@@ -85,9 +85,9 @@ class Params {
     };
     class DayDuration {
         title = $STR_PARAMS_DAYDURATION;
-        values[] = {8, 6, 4, 3, 2, 1};
-        texts[] = {"3","4","6","8","12","24"};
-        default = 4;
+        values[] = {7, 6, 4, 3, 2, 1};
+        texts[] = {"3.43","4","6","8","12","24"};
+        default = 7;
     };
     class ShorterNights {
         title = $STR_SHORTER_NIGHTS_PARAM;
@@ -111,7 +111,7 @@ class Params {
         title = $STR_PARAMS_RESOURCESMULTIPLIER;
         values[] = {0, 1, 2, 3, 4, 5, 6, 7};
         texts[] = {"x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3"};
-        default = 1;
+        default = 3;
     };
     class ArsenalType {
         title = $STR_PARAMS_ARSENAL;
@@ -261,7 +261,7 @@ class Params {
         title = $STR_PARAMS_AILOGISTICS;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 1;
+        default = 0;
     };
     class CR_Building {
         title = $STR_PARAM_CR_BUILDING;
