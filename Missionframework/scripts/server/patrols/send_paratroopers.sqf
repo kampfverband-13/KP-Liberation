@@ -36,7 +36,8 @@ if (isNull _chopper_type) then {
 private _para_group = createGroup [GRLIB_side_enemy, true];
 
 while {(count (units _para_group)) < 8} do {
-    [opfor_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
+    [opfor_paratrooper, markerPos _spawnsector, _para_group] spawn KPLIB_fnc_createManagedUnit;
+	sleep 1;
 };
 
 {removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle;} forEach (units _para_group);

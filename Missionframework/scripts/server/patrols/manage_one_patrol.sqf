@@ -30,15 +30,18 @@ while { GRLIB_endgame == 0 } do {
         _grp = createGroup [GRLIB_side_enemy, true];
         _squad = [] call KPLIB_fnc_getSquadComp;
         {
-            [_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+            [_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] spawn KPLIB_fnc_createManagedUnit;
+			sleep 1;
         } foreach _squad;
     } else {
 
         private [ "_vehicle_object" ];
         if ((combat_readiness > 75) && ((random 100) > 85) && !(opfor_choppers isEqualTo [])) then {
             _vehicle_object = [_sector_spawn_pos, selectRandom opfor_choppers] call KPLIB_fnc_spawnVehicle;
+			sleep 1;
         } else {
             _vehicle_object = [_sector_spawn_pos, [] call KPLIB_fnc_getAdaptiveVehicle] call KPLIB_fnc_spawnVehicle;
+			sleep 1;
         };
 
         sleep 0.5;
@@ -67,7 +70,8 @@ while { GRLIB_endgame == 0 } do {
                     _patrol_continue = false;
                     {
                         if ( vehicle _x != _x ) then {
-                            [(vehicle _x)] call KPLIB_fnc_cleanOpforVehicle;
+                            [(vehicle _x)] spawn KPLIB_fnc_cleanOpforVehicle;
+							sleep 1;
                         };
                         deleteVehicle _x;
                     } foreach (units _grp);
