@@ -64,94 +64,110 @@ infantry_units = [
 	["rhsusf_usmc_marpat_wd_sniper",5,5,5]
 ];
 
+
 light_vehicles = [
     ["UK3CB_NFA_B_Old_Bike",0,0,0],
     ["UK3CB_NFA_B_MMT",0,0,0],
     ["UK3CB_B_M1030_USMC_WDL",25,0,25],
+	
     ["B_Boat_Transport_01_F",50,0,50],
     ["rhs_bmk_t",50,0,50],
     ["I_C_Boat_Transport_02_F",100,0,100],
-    ["UK3CB_BAF_RHIB_HMG_DPMW_RM",200,150,200],
-    ["B_Boat_Armed_01_minigun_F",300,300,300],
-    ["rhsusf_mkvsoc",400,400,400],
+    ["UK3CB_BAF_RHIB_HMG_DPMW_RM",100,100,100],
+    ["B_Boat_Armed_01_minigun_F",150,150,150],
+	["rhsusf_mkvsoc",150,150,150],
+	
+    ["rhs_kamaz5350_open_msv",100,0,100],
+    ["RHS_Ural_MSV_01",100,0,100],
+    ["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy",100,0,100],
+    ["UK3CB_BAF_MAN_HX58_Cargo_Green_A_DPMW_RM",100,0,100],
+    ["B_Truck_01_transport_F",200,0,200],
+    ["rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy",150,100,150],
+	["rhsusf_M977A4_BKIT_M2_usarmy_wd",200,100,200],
+	
     ["rhsusf_m1151_usmc_wd",120,0,120],
     ["BWA3_Eagle_Fleck",150,0,150],
     ["rhs_tigr_3camo_msv",170,0,170],
-    ["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy",100,0,100],
-    ["rhs_kamaz5350_open_msv",100,0,100],
-    ["RHS_Ural_MSV_01",100,0,100],
-    ["rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy",300,100,300],
-    ["rhsusf_M977A4_BKIT_M2_usarmy_wd",400,100,800],
-    ["UK3CB_BAF_Panther_GPMG_Green_A_DPMW_RM",300,150,300],
-    ["BWA3_Eagle_FLW100_Fleck",300,200,300],
-	["UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW_RM",250,200,300],
-	["UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_B_DPMW_RM",250,300,300],
-	["UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW_RM",250,400,300],
-	["UK3CB_BAF_Jackal2_L2A1_W_DPMW_RM",300,200,300],
-	["UK3CB_BAF_Jackal2_GMG_W_DPMW_RM",300,300,300],
-    ["rhsusf_m1151_m2_v3_usmc_wd",300,100,300],
-    ["rhs_tigr_sts_3camo_msv",300,100,300],
-    ["rhsusf_m1045_w_s",300,500,300],
-    ["rhsusf_M1230_M2_usarmy_wd",400,150,400],
-    ["rhsusf_M1237_M2_usarmy_wd",400,150,400],
-	["UK3CB_CW_US_B_LATE_AAV",500,0,400],
-    ["BWA3_Dingo2_FLW100_MG3_Fleck",500,200,600],
-    ["BWA3_Dingo2_FLW200_GMW_Fleck",500,300,600],
-    ["BWA3_Dingo2_FLW200_M2_Fleck",500,300,600],
-    ["rhsusf_m113_usarmy",500,100,500],
-    ["I_LT_01_cannon_F",550,500,300],
-    ["I_LT_01_AT_F",550,900,300],
-    ["I_LT_01_AA_F",550,900,300],
-	["rhsusf_stryker_m1134_wd",650,900,450],
-    ["UK3CB_BAF_FV432_Mk3_RWS_Green_DPMW_RM",700,700,500],
-    ["UK3CB_BAF_MAN_HX58_Cargo_Green_A_DPMW_RM",1500,0,1500]
+	
+    ["rhsusf_m1151_m2_v3_usmc_wd",150,100,150],
+    ["rhs_tigr_sts_3camo_msv",170,120,170],
+    ["BWA3_Eagle_FLW100_Fleck",150,200,150],
+    ["UK3CB_BAF_Panther_GPMG_Green_A_DPMW_RM",150,250,150],
+	
+    ["rhsusf_m1045_w_s",150,500,150],
+	["UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW_RM",150,200,150],
+	["UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_B_DPMW_RM",150,250,150],
+	["UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW_RM",150,500,150],
+	["UK3CB_BAF_Jackal2_L2A1_W_DPMW_RM",200,200,200],
+	["UK3CB_BAF_Jackal2_GMG_W_DPMW_RM",200,300,200],
+	
+    ["BWA3_Dingo2_FLW100_MG3_Fleck",350,200,350],
+    ["BWA3_Dingo2_FLW200_M2_Fleck",350,250,350],
+    ["BWA3_Dingo2_FLW200_GMW_Fleck",350,300,350],
+    ["rhsusf_M1230_M2_usarmy_wd",350,100,350],
+    ["rhsusf_M1237_M2_usarmy_wd",400,100,400]
 ];
 
 
 heavy_vehicles = [
-    ["rhs_btr80a_msv",700,1000,800],
-    ["rhsusf_stryker_m1126_m2_wd",700,300,700],
-    ["BWA3_Puma_Fleck",1200,1500,1100],
-    ["RHS_M2A3_wd",1200,1200,1100],
-    ["rhs_bmp2d_msv",1000,1500,1100],
-    ["rhs_zsu234_aa",1000,1100,1000],
-    ["UK3CB_O_2S6M_Tunguska_VPV",1000,1500,1000],
+    ["rhs_btr80a_msv",450,450,450],
+    ["rhsusf_m113_usarmy",450,100,450],
+    ["UK3CB_BAF_FV432_Mk3_RWS_Green_DPMW_RM",450,100,450],
+    ["rhsusf_stryker_m1126_m2_wd",600,250,600],
+	["rhsusf_stryker_m1134_wd",600,900,600],
+	["UK3CB_CW_US_B_LATE_AAV",700,500,700],
+    ["I_LT_01_cannon_F",450,500,450],
+    ["I_LT_01_AT_F",450,900,450],
+    ["I_LT_01_AA_F",450,900,450],
+	
+    ["rhs_bmp2d_msv",900,1200,900],
+    ["BWA3_Puma_Fleck",1200,1500,1200],
+    ["RHS_M2A3_wd",1200,1200,1200],
+    ["rhs_zsu234_aa",900,1100,900],
+    ["UK3CB_O_2S6M_Tunguska_VPV",900,1500,900],
     ["RHS_M6_wd",1200,1100,1100],
-    ["rhs_t90a_tv",2000,1800,1800],
+	
+    ["rhs_t90a_tv",2000,1800,2000],
     ["BWA3_Leopard2_Fleck",2000,2000,2000],
-    ["rhsusf_m1a2sep2wd_usarmyy",2000,2000,2000],
-    ["rhs_t14_tv",2000,2100,2000],
+    ["rhsusf_m1a2sep1tuskiiwd_usarmy",2000,2000,2000],
+	
     ["RHS_M119_WD",4000,4000,2000],
 	["UK3CB_CW_SOV_O_LATE_2S3",4000,4000,2000],
     ["rhs_D30_msv",4000,4500,2000],
-    ["UK3CB_CW_US_B_LATE_M109",5500,5000,4000],
-    ["B_Truck_01_transport_F",2000,0,2000]
+    ["UK3CB_CW_US_B_LATE_M109",5500,5000,4000]
 ];
 
 
 air_vehicles = [
-    ["RHS_MELB_MH6M",500,0,600],
-    ["rhs_ka60_grey",500,0,600],
-    ["RHS_UH1Y_UNARMED",500,0,500],
-    ["RHS_UH60M",800,300,800],
-    ["RHS_Mi8AMT_vdv",1200,0,1800],
+    ["RHS_MELB_MH6M",500,0,500],
+    ["rhs_ka60_grey",500,0,500],
+    ["RHS_UH1Y_UNARMED",600,0,600],
+    ["RHS_Mi8AMT_vdv",600,0,600],
+	
+    ["RHS_MELB_AH6M",600,1000,600],
+    ["RHS_UH1Y",600,1000,600],
+	
+    ["RHS_UH60M",700,300,700],
     ["RHS_CH_47F",1400,300,1800],
     ["UK3CB_BAF_Merlin_HC3_CSAR_DPMW_RM",1200,500,1200],
     ["rhsusf_CH53e_USMC_cargo",2000,0,2000],
-    ["RHS_C130J",2000,0,2000],
-    ["RHS_MELB_AH6M",800,1000,800],
-    ["RHS_UH1Y",800,1000,800],
-    ["UK3CB_BAF_Wildcat_AH1_CAS_6C_DPMW_RM",900,1000,900],
+	
 	["RHSGREF_A29B_HIDF",1000,1000,1000],
+    ["UK3CB_BAF_Wildcat_AH1_CAS_6C_DPMW_RM",1200,1600,1200],
     ["RHS_UH60M_ESSS",1600,2000,1600],
     ["RHS_Mi8MTV3_heavy_vdv",1400,1600,1400],
+	
+    ["rhsgref_mi24g_CAS",2400,2000,2400],
     ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
     ["RHS_AH1Z_wd",2000,2300,2000],
     ["RHS_AH64D_wd",2000,2600,2000],
-    ["rhsgref_mi24g_CAS",2400,2000,2000],
+	
+    ["RHS_C130J",2000,0,2000],
+	
     ["rhsusf_f22",3000,2800,2800],
     ["rhs_mig29sm_vvsc",2800,3000,2800],
     ["I_Plane_Fighter_03_dynamicLoadout_F",2800,2800,2800],
+	
     ["RHS_Su25SM_vvsc",3000,3600,3000],
     ["B_Plane_CAS_01_dynamicLoadout_F",3000,4000,3000],
     ["RHS_A10",3000,4000,3000]
