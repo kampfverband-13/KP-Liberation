@@ -44,7 +44,8 @@ private _corrected_amount = round ((count _classnames) * ([] call KPLIB_fnc_getO
 private _grp = createGroup [GRLIB_side_enemy, true];
 {
     if (_forEachIndex < _corrected_amount) then {
-        [_x, _spawnPos, _grp] call KPLIB_fnc_createManagedUnit;
+        [_x, _spawnPos, _grp] spawn KPLIB_fnc_createManagedUnit;
+		sleep 1;
     };
 } forEach _classnames;
 

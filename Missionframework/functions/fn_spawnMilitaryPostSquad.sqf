@@ -35,6 +35,7 @@ private _unit = objNull;
 private _units = [];
 {
     _unit = [[opfor_marksman, opfor_machinegunner] select (random 100 > 50), _pos, _grp] call KPLIB_fnc_createManagedUnit;
+	sleep 1;
     _unit setdir (180 + (getdir _x));
     _unit setpos (([_x] call BIS_fnc_buildingPositions) select 1);
     [_unit] spawn building_defence_ai;

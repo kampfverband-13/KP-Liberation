@@ -45,7 +45,8 @@ for "_i" from 1 to _amount do {
             _grp
         ] call KPLIB_fnc_createManagedUnit
     );
-
+	sleep 1;
+	
     [_grp] call add_civ_waypoints;
 };
 
