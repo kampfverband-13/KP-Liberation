@@ -55,7 +55,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [] call bis_fnc_reviveInit;
 };
 
-// MilSimUnited ===========================================================================
+// MilSim United ===========================================================================
 
 ["CargoNet_01_box_F", "InitPost", {
     params ["_vehicle"];
@@ -163,6 +163,11 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle,2] call ace_cargo_fnc_setSpace;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+	[
+		_vehicle,
+		["Green",1], 
+		true
+	] call BIS_fnc_initVehicle;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["UK3CB_NFA_B_MMT", "InitPost", {
@@ -171,6 +176,11 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle,2] call ace_cargo_fnc_setSpace;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+	[
+		_vehicle,
+		["DarkGreen",1], 
+		true
+	] call BIS_fnc_initVehicle;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["UK3CB_B_M1030_USMC_WDL", "InitPost", {
@@ -314,7 +324,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_salineIV";};
 	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_epinephrine";};
 	_vehicle addItemToBackpack "ACE_surgicalKit";
-	_vehicle addHeadgear "rhsgref_helmet_pasgt_flecktarn";
+	_vehicle addHeadgear "Helmet_SF_flecktarn";
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 
@@ -361,15 +371,13 @@ SA_TOW_RULES_OVERRIDE =[
 ];
 // ["Car", "CANT_TOW", "Tank"],
 // ["Air", "CANT_TOW", "Air"]
-//[AiCacheDistance(players),TargetFPS(-1 for Auto),Debug,CarCacheDistance,AirCacheDistance,BoatCacheDistance]execvm "zbe_cache\main.sqf";
 
+
+//[AiCacheDistance(players),TargetFPS(-1 for Auto),Debug,CarCacheDistance,AirCacheDistance,BoatCacheDistance]execvm "zbe_cache\main.sqf";
 if (isServer) then {[2000,-1,false,100,1000,100]execvm "zbe_cache\main.sqf"};
 
-//Variables for playerLogging
-MSU_civ_kills = profileNamespace getVariable ["MSU_civ_kills",[]];
 
-
-// MilSimUnited ===========================================================================
+// MilSim United ===========================================================================
 
 KPLIB_init = true;
 

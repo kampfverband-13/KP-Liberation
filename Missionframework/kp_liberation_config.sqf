@@ -207,9 +207,9 @@ GRLIB_halo_altitude = 5000;                                             // Altit
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 90;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 800;                                               // Range to activate a sector.
+GRLIB_sector_size = 700;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.3;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 8;                                             // Size of enemy battlegroups.
@@ -230,7 +230,7 @@ KP_liberation_cr_building_penalty = 8;                                  // Civil
 KP_liberation_cr_vehicle_penalty = 5;                                   // Civil Reputation penalty for stealing a civilian vehicle.
 KP_liberation_cr_resistance_penalty = 10;                                // Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 2;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 50;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_chance = 80;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KP_liberation_cr_wounded_gain = 5;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
@@ -969,6 +969,8 @@ blacklisted_from_arsenal = [
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
+// experimentally disabled, in an attempt to fix losing BW Mod sights on redeploy
+/*
 KP_liberation_allowed_items_extension = [
 	"bwa3_optic_zo4x30",
     "bwa3_optic_zo4x30_brown",
@@ -1009,6 +1011,8 @@ KP_liberation_allowed_items_extension = [
     "bwa3_optic_rsas_sand",
     "bwa3_optic_rsas_tan"
 ];
+*/
+KP_liberation_allowed_items_extension = [];
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */

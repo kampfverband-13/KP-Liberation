@@ -164,6 +164,32 @@ gain_resources = compileFinal "
 ";
 
 
+liberate_sector = compileFinal "
+	
+	params ['_liberated_sector'];
+	
+	if (isServer) then {
+		_score = 20;
+		switch (true) do {
+			case (_liberated_sector in sectors_bigtown): { _score = 50; };
+			case (_liberated_sector in sectors_capture): { _score = 30; };
+			case (_liberated_sector in sectors_military): { _score = 30; };
+			case (_liberated_sector in sectors_factory): { _score = 30; };
+			case (_liberated_sector in sectors_tower): { _score = 20; };
+		};
+		
+		_headlessClients = entities 'HeadlessClient_F';
+		_humanPlayers = allPlayers - _headlessClients;
+		
+		{
+			_uid = getPlayerUID _x;
+			[_uid,_score] spawn KPR_fnc_addScore
+		} foreach _humanPlayers;
+		
+	};
+";
+
+
 KP_liberation_supplies_global = 1;
 KP_liberation_ammo_global = 1;
 KP_liberation_fuel_global = 1;
@@ -192,9 +218,9 @@ hs_spawn = compileFinal "
 		
         _spawnChance = 4;
 		
-        if(_count_players < 5) then {_spawnChance = 12;};
-        if(_count_players >= 5 && _count_players < 15) then {_spawnChance = 9;};
-        if(_count_players >= 15) then {_spawnChance = 6;};
+        if(_count_players < 5) then {_spawnChance = 9;};
+        if(_count_players >= 5 && _count_players < 15) then {_spawnChance = 6;};
+        if(_count_players >= 15) then {_spawnChance = 3;};
            
 		_hs_randomizer = floor(random _spawnchance);
 		
@@ -432,30 +458,6 @@ roadblocks = compileFinal "
 	deleteVehicle _helper2;
 ";
 
-liberate_sector = compileFinal "
-	
-	params ['_liberated_sector'];
-	
-	if (isServer) then {
-		_score = 20;
-		switch (true) do {
-			case (_liberated_sector in sectors_bigtown): { _score = 50; [3] spawn gain_resources; };
-			case (_liberated_sector in sectors_capture): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_military): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_factory): { _score = 30; [2] spawn gain_resources; };
-			case (_liberated_sector in sectors_tower): { _score = 20; [1] spawn gain_resources; };
-		};
-		
-		_headlessClients = entities 'HeadlessClient_F';
-		_humanPlayers = allPlayers - _headlessClients;
-		
-		{
-			_uid = getPlayerUID _x;
-			[_uid,_score] spawn KPR_fnc_addScore
-		} foreach _humanPlayers;
-		
-	};
-";
 
 ieds = compileFinal "
 	_allIED = allMines;
