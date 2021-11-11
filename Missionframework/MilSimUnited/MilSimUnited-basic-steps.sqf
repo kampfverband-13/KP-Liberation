@@ -74,6 +74,47 @@ BIS_fnc_showNotification suchen und auskommentieren:
 
 
 
+call KPLIB_fnc_createManagedUnit und KPLIB_fnc_spawnVehicle mit spawn ersetzen: 
+
+Funktionssicher:
+functions\fn_spawnRegularSquad.sqf
+functions\fn_spawnBuildingSquad.sqf
+functions\fn_spawnCivilians.sqf
+functions\fn_spawnMilitaryPostSquad.sqf
+scripts\server\ai\troup_transport.sqf
+scripts\server\battlegroup\spawn_battlegroup.sqf
+scripts\server\patrols\manage_one_civilian_patrol.sqf
+scripts\server\patrols\manage_one_patrol.sqf
+scripts\server\patrols\send_paratroopers.sqf
+
+
+Alle Vorkommen:
+functions\fn_forceBluforCrew.sqf
+functions\fn_spawnBuildingSquad.sqf ------------------------------------ !
+functions\fn_spawnCivilians.sqf --------------------------------------------- !
+functions\fn_spawnGuerillaGroup.sqf
+functions\fn_spawnMilitaryPostSquad.sqf ------------------------------ !
+functions\fn_spawnMilitiaCrew.sqf
+functions\fn_spawnRegularSquad.sqf
+scripts\server\ai\troup_transport.sqf
+scripts\server\battlegroup\spawn_battlegroup.sqf
+scripts\server\civinformant\tasks\civinfo_task.sqf
+scripts\server\patrols\manage_one_civilian_patrol.sqf
+scripts\server\patrols\manage_one_patrol.sqf
+scripts\server\patrols\send_paratroopers.sqf
+scripts\server\secondary\convoy_hijack.sqf
+scripts\server\secondary\fob_hunting.sqf
+scripts\server\secondary\search_and_rescue.sqf
+scripts\server\sector\attack_in_progress_fob.sqf
+scripts\server\sector\attack_in_progress_sector.sqf
+
+
+
+
+
+
+
+
 
 
 
