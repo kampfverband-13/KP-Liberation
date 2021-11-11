@@ -104,6 +104,8 @@ heavy_vehicles = [
     ["I_LT_01_AA_F",450,900,450],
 	
     ["rhs_bmp2d_msv",900,1200,900],
+    ["UK3CB_BAF_Warrior_A3_W_Cage_Camo_MTP",1200,900,1200],
+    ["UK3CB_BAF_Warrior_A3_D_Cage_Camo_MTP",1200,900,1200],
     ["BWA3_Puma_Fleck",1200,1500,1200],
     ["BWA3_Puma_Tropen",1200,1500,1200],
     ["RHS_M2A3_wd",1200,1200,1200],
