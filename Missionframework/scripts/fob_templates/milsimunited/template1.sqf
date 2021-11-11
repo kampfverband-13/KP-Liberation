@@ -13,7 +13,7 @@ private _objects_to_build = [
     ["Land_HBarrier_Big_F", [16.79, 0.07, -0.00], 0.00],
     ["Land_Cargo_Tower_V1_F", [10.38, -5.88, 0.00], 0.00],
     ["Land_HBarrier_Big_F", [-11.47, 14.18, 0.00], 0.00],
-    ["UK3CB_AAF_O_ZU23", [-18.27, -6.40, 0.00], 292.97],
+    ["rhs_zsu234_aa", [-18.27, -6.40, 0.00], 292.97],
     ["Land_fort_rampart", [4.43, 19.54, -0.05], 180.00],
     ["Land_BagBunker_Small_F", [11.36, 20.17, 0.00], 194.99],
     ["Land_fort_bagfence_corner", [22.52, 6.04, -0.00], 180.00],
