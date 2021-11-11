@@ -7,28 +7,28 @@
 */
 
 // Enemy infantry classes
-opfor_officer = "O_Soldier_F";                                          // Officer
-opfor_squad_leader = "O_Soldier_F";                                  // Squad Leader
-opfor_team_leader = "O_Soldier_F";                                   // Team Leader
-opfor_sentry = "O_Soldier_F";                                      // Rifleman (Lite)
-opfor_rifleman = "O_Soldier_F";                                         // Rifleman
-opfor_rpg = "O_Soldier_LAT_F";                                         // Rifleman (LAT)
-opfor_grenadier = "O_Soldier_AR_F";                                     // Grenadier
-opfor_machinegunner = "O_Soldier_AR_F";                                 // Autorifleman
-opfor_heavygunner = "O_Soldier_AR_F";                                   // Heavy Gunner
-opfor_marksman = "O_Soldier_AR_F";                                       // Marksman
-opfor_sharpshooter = "O_Soldier_LAT_F";                                   // Sharpshooter
-opfor_sniper = "O_Soldier_AA_F";                                      // Sniper
-opfor_at = "O_Soldier_LAT_F";                                            // AT Specialist
-opfor_aa = "O_Soldier_AA_F";                                            // AA Specialist
-opfor_medic = "O_Soldier_F";                                              // Combat Life Saver
-opfor_engineer = "O_Soldier_F";                                        // Engineer
-opfor_paratrooper = "O_soldier_PG_F";                                   // Paratrooper
+opfor_officer = "LOP_AA_Infantry_Rifleman";                                          // Officer
+opfor_squad_leader = "LOP_AA_Infantry_Rifleman";                                  // Squad Leader
+opfor_team_leader = "LOP_AA_Infantry_Rifleman";                                   // Team Leader
+opfor_sentry = "LOP_AA_Infantry_Rifleman";                                      // Rifleman (Lite)
+opfor_rifleman = "LOP_AA_Infantry_Rifleman";                                         // Rifleman
+opfor_rpg = "LOP_AA_Infantry_AT";                                         // Rifleman (LAT)
+opfor_grenadier = "LOP_AA_Infantry_MG_2";                                     // Grenadier
+opfor_machinegunner = "LOP_AA_Infantry_MG_2";                                 // Autorifleman
+opfor_heavygunner = "LOP_AA_Infantry_MG_2";                                   // Heavy Gunner
+opfor_marksman = "LOP_AA_Infantry_MG_2";                                       // Marksman
+opfor_sharpshooter = "LOP_AA_Infantry_AT";                                   // Sharpshooter
+opfor_sniper = "LOP_IRAN_Infantry_AA";                                      // Sniper
+opfor_at = "LOP_AA_Infantry_AT";                                            // AT Specialist
+opfor_aa = "LOP_IRAN_Infantry_AA";                                            // AA Specialist
+opfor_medic = "LOP_AA_Infantry_Rifleman";                                              // Combat Life Saver
+opfor_engineer = "LOP_AA_Infantry_Rifleman";                                        // Engineer
+opfor_paratrooper = "PO_IA_Infantry_SF_AT";                                   // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "rhsusf_M1117_D";                                             // M-ATV
 opfor_mrap_armed = "rhsusf_M1117_D";                                   // MATV (HMG)
-opfor_transport_helo = "rhsgref_cdf_b_reg_Mi8amt";                         // Merlin
+opfor_transport_helo = "LOP_AA_Mi8MTV3_FAB";                         // Merlin
 opfor_transport_truck = "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy";                         // Kamaz Transport (Covered)
 opfor_ammobox_transport = "rhsusf_M977A4_BKIT_M2_usarmy_d";                     // Kamaz Transport (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "UK3CB_BAF_MAN_HX60_Fuel_Sands";                                 // Kamaz Fuel
@@ -45,18 +45,18 @@ Think of them like garrison or military police forces, which are more meant to c
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 militia_squad = [
-    "O_Soldier_F",
-    "O_Soldier_AR_F",
-    "O_Soldier_LAT_F",
-    "O_Soldier_AA_F",
-    "O_Soldier_F",
-    "O_Soldier_AR_F",
-    "O_Soldier_LAT_F",
-    "O_Soldier_F",
-  	"O_Soldier_AR_F",
-  	"O_Soldier_LAT_F",
-  	"O_Soldier_F",
-    "O_Soldier_F"
+    "LOP_AA_Infantry_Rifleman",
+    "LOP_AA_Infantry_MG_2",
+    "LOP_AA_Infantry_AT",
+    "LOP_IRAN_Infantry_AA",
+    "LOP_AA_Infantry_Rifleman",
+    "LOP_AA_Infantry_MG_2",
+    "LOP_AA_Infantry_AT",
+  	"LOP_IRAN_Infantry_AA",
+    "LOP_AA_Infantry_Rifleman",
+  	"LOP_AA_Infantry_MG_2",
+  	"LOP_AA_Infantry_AT",
+    "LOP_AA_Infantry_Rifleman"
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
@@ -70,8 +70,8 @@ militia_vehicles = [
 opfor_vehicles = [
 	"rhsusf_m1025_d_m2",
 	"rhsusf_M1117_D",
-	"rhs_t72bb_tv",
-	"rhs_zsu234_aa"
+	"LOP_AA_T72BB",
+	"LOP_AA_ZSU234"
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
@@ -84,8 +84,8 @@ opfor_vehicles_low_intensity = [
 opfor_battlegroup_vehicles = [
 	"rhsusf_m1025_d_m2",
 	"rhsusf_M1117_D",
-	"rhs_t72bb_tv",
-	"rhs_zsu234_aa"
+	"LOP_AA_T72BB",
+	"LOP_AA_ZSU234"
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
@@ -98,17 +98,18 @@ opfor_battlegroup_vehicles_low_intensity = [
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 opfor_troup_transports = [
 	"rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy",
-	"RHS_Mi8MTV3_heavy_vdv"
+	"LOP_AA_Mi8MTV3_FAB"
 ];
 
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
-	"RHS_Mi8MTV3_heavy_vdv"
+	"LOP_AA_Mi8MTV3_FAB",
+	"LOP_IRAN_AH1Z_CS"
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
-	"RHS_Su25SM_vvs",
-	"rhs_mig29sm_vvs"
+	"rhsgref_cdf_su25",
+	"rhsgref_cdf_mig29s"
 ];
