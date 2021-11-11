@@ -74,6 +74,9 @@ BIS_fnc_showNotification suchen und auskommentieren:
 
 
 
+
+// Könnte Probleme machen, weil die Objekte zu Zeitpunkt x nicht im Netzwerk vorhanden sind ------------------------------
+
 call KPLIB_fnc_createManagedUnit und KPLIB_fnc_spawnVehicle mit spawn ersetzen: 
 
 Funktionssicher:
@@ -108,7 +111,7 @@ scripts\server\secondary\search_and_rescue.sqf
 scripts\server\sector\attack_in_progress_fob.sqf
 scripts\server\sector\attack_in_progress_sector.sqf
 
-
+// Könnte Probleme machen, weil die Objekte zu Zeitpunkt x nicht im Netzwerk vorhanden sind ------------------------------
 
 
 
