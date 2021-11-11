@@ -99,12 +99,13 @@ heavy_vehicles = [
     ["UK3CB_BAF_FV432_Mk3_RWS_Sand_MTP",450,100,450],
     ["rhsusf_stryker_m1126_m2_wd",600,250,600],
 	["rhsusf_stryker_m1134_wd",600,900,600],
-	["UK3CB_CW_US_B_LATE_AAV",700,500,700],
     ["I_LT_01_cannon_F",450,500,450],
     ["I_LT_01_AT_F",450,900,450],
     ["I_LT_01_AA_F",450,900,450],
 	
     ["rhs_bmp2d_msv",900,1200,900],
+    ["UK3CB_BAF_Warrior_A3_W_Cage_Camo_MTP",1200,900,1200],
+    ["UK3CB_BAF_Warrior_A3_D_Cage_Camo_MTP",1200,900,1200],
     ["BWA3_Puma_Fleck",1200,1500,1200],
     ["BWA3_Puma_Tropen",1200,1500,1200],
     ["RHS_M2A3_wd",1200,1200,1200],
@@ -120,7 +121,6 @@ heavy_vehicles = [
     ["rhsusf_m1a2sep1tuskiid_usarmy",2000,2000,2000],
 	
     ["RHS_M119_WD",4000,4000,2000],
-	["UK3CB_CW_SOV_O_LATE_2S3",4000,4000,2000],
     ["rhs_D30_msv",4000,4500,2000],
     ["rhsusf_m109_usarmy",5500,5000,4000],
     ["rhsusf_m109d_usarmy",5500,5000,4000]
