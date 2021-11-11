@@ -36,8 +36,7 @@ if !(_spawn_marker isEqualTo "") then {
                 _bg_groups pushBack _grp;
                 _grp = createGroup [GRLIB_side_enemy, true];
             };
-            [selectRandom _infClasses, markerPos _spawn_marker, _grp] spawn KPLIB_fnc_createManagedUnit;
-			sleep 1;
+            [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
         };
         [_grp] spawn battlegroup_ai;
         _bg_groups pushBack _grp;
