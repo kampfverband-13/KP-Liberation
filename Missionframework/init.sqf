@@ -55,7 +55,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [] call bis_fnc_reviveInit;
 };
 
-// MilSimUnited ===========================================================================
+// MilSim United ===========================================================================
 
 ["CargoNet_01_box_F", "InitPost", {
     params ["_vehicle"];
@@ -71,7 +71,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 ["B_CargoNet_01_ammo_F", "InitPost", {
     params ["_vehicle"];
 	[_vehicle,3] call ace_cargo_fnc_setSize;
-	[_vehicle, 1200] call ace_rearm_fnc_makeSource;
+	[_vehicle, 1000] call ace_rearm_fnc_makeSource;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
@@ -82,6 +82,21 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [_vehicle, 1200] call ace_refuel_fnc_makeSource;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["B_Slingload_01_Ammo_F", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle, 1000000] call ace_rearm_fnc_makeSource;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["rhsusf_M977A4_AMMO_BKIT_usarmy_wd", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle, 15000] call ace_rearm_fnc_makeSource;
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["rhsusf_M977A4_AMMO_BKIT_usarmy_d", "InitPost", {
+    params ["_vehicle"];
+	[_vehicle, 15000] call ace_rearm_fnc_makeSource;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["RHS_MELB_MH6M", "InitPost", {
@@ -163,6 +178,11 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle,2] call ace_cargo_fnc_setSpace;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+	[
+		_vehicle,
+		["Green",1], 
+		true
+	] call BIS_fnc_initVehicle;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["UK3CB_NFA_B_MMT", "InitPost", {
@@ -171,6 +191,11 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle,2] call ace_cargo_fnc_setSpace;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
+	[
+		_vehicle,
+		["DarkGreen",1], 
+		true
+	] call BIS_fnc_initVehicle;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["UK3CB_B_M1030_USMC_WDL", "InitPost", {
@@ -267,6 +292,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 
 ["rhsusf_socom_marsoc_sarc", "InitPost", {
 	params ["_vehicle"];
+	
 	_vehicle setSpeaker "NoVoice";
 	_vehicle setUnitTrait ["Medic",true];
 	_vehicle setUnitTrait ["Engineer",true];
@@ -296,6 +322,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 
 ["BWA3_Medic_Fleck", "InitPost", {
 	params ["_vehicle"];
+	
 	_vehicle setSpeaker "NoVoice";
 	_vehicle setUnitTrait ["Medic",true];
 	_vehicle setUnitTrait ["Engineer",true];
@@ -314,12 +341,13 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_salineIV";};
 	for "_i" from 1 to 10 do {_vehicle addItemToBackpack "ACE_epinephrine";};
 	_vehicle addItemToBackpack "ACE_surgicalKit";
-	_vehicle addHeadgear "rhsgref_helmet_pasgt_flecktarn";
+	_vehicle addHeadgear "Helmet_SF_flecktarn";
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 
 ["rhs_msv_emr_medic", "InitPost", {
 	params ["_vehicle"];
+	
 	_vehicle setSpeaker "NoVoice";
 	_vehicle setUnitTrait ["Medic",true];
 	_vehicle setUnitTrait ["Engineer",true];
@@ -348,6 +376,485 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 
+["O_Soldier_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "rhsusf_spc_patchless";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetSpecB_sand";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_Soldier_AR_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m240B";
+	_vehicle addPrimaryWeaponItem "rhsusf_100Rnd_762x51_m61_ap";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "rhsusf_spc_patchless";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhsusf_100Rnd_762x51_m61_ap";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetSpecB_sand";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_Soldier_LAT_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+	_vehicle addWeapon "rhs_weap_maaws";
+	_vehicle addSecondaryWeaponItem "rhs_optic_maaws";
+	_vehicle addSecondaryWeaponItem "rhs_mag_maaws_HEAT";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "rhsusf_spc_patchless";
+	_vehicle addBackpack "B_Kitbag_cbr";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 4 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToBackpack "rhs_mag_maaws_HEAT";};
+	_vehicle addHeadgear "H_HelmetSpecB_sand";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_Soldier_AA_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+	_vehicle addWeapon "rhs_weap_fim92";
+	_vehicle addSecondaryWeaponItem "rhs_fim92_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "rhsusf_spc_patchless";
+	_vehicle addBackpack "B_Kitbag_cbr";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 4 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToBackpack "rhs_fim92_mag";};
+	_vehicle addHeadgear "H_HelmetSpecB_sand";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_crew_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetCrew_I";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhs_msv_crew", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetCrew_I";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhs_msv_crew_commander", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetCrew_I";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_helipilot_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_PilotHelmetHeli_O";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhs_pilot_transport_heli", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_PilotHelmetHeli_O";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["rhs_pilot", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "V_TacVest_brn";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_PilotHelmetHeli_O";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
+["O_soldier_PG_F", "InitPost", {
+	params ["_vehicle"];
+
+	removeAllWeapons _vehicle;
+	removeAllItems _vehicle;
+	removeAllAssignedItems _vehicle;
+	removeUniform _vehicle;
+	removeVest _vehicle;
+	removeBackpack _vehicle;
+	removeHeadgear _vehicle;
+
+	_vehicle addWeapon "rhs_weap_m16a4_carryhandle";
+	_vehicle addPrimaryWeaponItem "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+
+	_vehicle forceAddUniform "CamoU_USD_rs";
+	_vehicle addVest "rhsusf_spc_patchless";
+	_vehicle addBackpack "B_Parachute";
+
+	_vehicle addItemToUniform "ACE_tourniquet";
+	_vehicle addItemToUniform "ACE_splint";
+	_vehicle addItemToUniform "ACE_morphine";
+	_vehicle addItemToUniform "ACE_epinephrine";
+	_vehicle addItemToUniform "ACE_EarPlugs";
+	_vehicle addItemToUniform "ACE_salineIV_250";
+	_vehicle addItemToUniform "ACE_packingBandage";
+	_vehicle addItemToUniform "ACE_fieldDressing";
+	_vehicle addItemToUniform "ACE_elasticBandage";
+	_vehicle addItemToUniform "ACE_quikclot";
+	_vehicle addItemToUniform "ACE_Chemlight_IR";
+	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "rhs_mag_m67";};
+	for "_i" from 1 to 6 do {_vehicle addItemToVest "ACE_30Rnd_556x45_Stanag_M995_AP_mag";};
+	for "_i" from 1 to 2 do {_vehicle addItemToVest "SmokeShell";};
+	_vehicle addHeadgear "H_HelmetSpecB_sand";
+
+	_vehicle linkItem "ItemMap";
+	_vehicle linkItem "ItemCompass";
+	_vehicle linkItem "ItemWatch";
+	_vehicle linkItem "TFAR_anprc152";
+	_vehicle linkItem "ItemGPS";
+	_vehicle linkItem "NVGoggles_OPFOR";
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+
 // Advanced Singloading
 ASL_SLING_RULES_OVERRIDE = [ 
 	["Air", "CAN_SLING", "All"]
@@ -361,15 +868,13 @@ SA_TOW_RULES_OVERRIDE =[
 ];
 // ["Car", "CANT_TOW", "Tank"],
 // ["Air", "CANT_TOW", "Air"]
-//[AiCacheDistance(players),TargetFPS(-1 for Auto),Debug,CarCacheDistance,AirCacheDistance,BoatCacheDistance]execvm "zbe_cache\main.sqf";
 
+
+//[AiCacheDistance(players),TargetFPS(-1 for Auto),Debug,CarCacheDistance,AirCacheDistance,BoatCacheDistance]execvm "zbe_cache\main.sqf";
 if (isServer) then {[2000,-1,false,100,1000,100]execvm "zbe_cache\main.sqf"};
 
-//Variables for playerLogging
-MSU_civ_kills = profileNamespace getVariable ["MSU_civ_kills",[]];
 
-
-// MilSimUnited ===========================================================================
+// MilSim United ===========================================================================
 
 KPLIB_init = true;
 
