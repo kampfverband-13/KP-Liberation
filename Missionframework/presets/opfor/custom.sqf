@@ -7,35 +7,35 @@
 */
 
 // Enemy infantry classes
-opfor_officer = "UK3CB_AAF_O_JNR_OFF";                                          // Officer
-opfor_squad_leader = "UK3CB_AAF_O_SF_SL";                                  // Squad Leader
-opfor_team_leader = "UK3CB_AAF_O_SF_TL";                                   // Team Leader
-opfor_sentry = "UK3CB_AAF_O_SF_RIF_2";                                      // Rifleman (Lite)
-opfor_rifleman = "UK3CB_AAF_O_SF_RIF_1";                                         // Rifleman
-opfor_rpg = "UK3CB_AAF_O_SF_LAT";                                         // Rifleman (LAT)
-opfor_grenadier = "UK3CB_AAF_O_SF_GL";                                     // Grenadier
-opfor_machinegunner = "UK3CB_AAF_O_SF_AR";                                 // Autorifleman
-opfor_heavygunner = "UK3CB_AAF_O_SF_MG";                                   // Heavy Gunner
-opfor_marksman = "UK3CB_AAF_O_SF_MK";                                       // Marksman
-opfor_sharpshooter = "UK3CB_AAF_O_SF_MK";                                   // Sharpshooter
-opfor_sniper = "UK3CB_AAF_O_SF_SNI";                                      // Sniper
-opfor_at = "UK3CB_AAF_O_SF_AT";                                            // AT Specialist
-opfor_aa = "UK3CB_AAF_O_SF_AA";                                            // AA Specialist
-opfor_medic = "UK3CB_AAF_O_SF_MD";                                              // Combat Life Saver
-opfor_engineer = "UK3CB_AAF_O_SF_DEM";                                        // Engineer
-opfor_paratrooper = "UK3CB_AAF_O_SF_RIF_2";                                   // Paratrooper
+opfor_officer = "O_Soldier_F";                                          // Officer
+opfor_squad_leader = "O_Soldier_F";                                  // Squad Leader
+opfor_team_leader = "O_Soldier_F";                                   // Team Leader
+opfor_sentry = "O_Soldier_F";                                      // Rifleman (Lite)
+opfor_rifleman = "O_Soldier_F";                                         // Rifleman
+opfor_rpg = "O_Soldier_LAT_F";                                         // Rifleman (LAT)
+opfor_grenadier = "O_Soldier_AR_F";                                     // Grenadier
+opfor_machinegunner = "O_Soldier_AR_F";                                 // Autorifleman
+opfor_heavygunner = "O_Soldier_AR_F";                                   // Heavy Gunner
+opfor_marksman = "O_Soldier_AR_F";                                       // Marksman
+opfor_sharpshooter = "O_Soldier_LAT_F";                                   // Sharpshooter
+opfor_sniper = "O_Soldier_AA_F";                                      // Sniper
+opfor_at = "O_Soldier_LAT_F";                                            // AT Specialist
+opfor_aa = "O_Soldier_AA_F";                                            // AA Specialist
+opfor_medic = "O_Soldier_F";                                              // Combat Life Saver
+opfor_engineer = "O_Soldier_F";                                        // Engineer
+opfor_paratrooper = "O_soldier_PG_F";                                   // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "UK3CB_AAF_O_Tigr_STS";                                             // M-ATV
-opfor_mrap_armed = "UK3CB_AAF_O_GAZ_Vodnik_PKT";                                   // MATV (HMG)
+opfor_mrap = "rhsusf_M1117_D";                                             // M-ATV
+opfor_mrap_armed = "rhsusf_M1117_D";                                   // MATV (HMG)
 opfor_transport_helo = "UK3CB_AAF_O_Mi8";                         // Merlin
-opfor_transport_truck = "UK3CB_AAF_O_Ural";                         // Kamaz Transport (Covered)
-opfor_ammobox_transport = "UK3CB_AAF_O_Ural_Open";                     // Kamaz Transport (Open) -> Has to be able to transport resource crates!
-opfor_fuel_truck = "UK3CB_AAF_O_Ural_Fuel";                                 // Kamaz Fuel
-opfor_ammo_truck = "UK3CB_AAF_O_Ural_Ammo";                                 // Kamz Ammo
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";                         // Huron Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";                         // Huron Ammo Pod
-opfor_flag = "Flag_AAF_F";                                              // Flag
+opfor_transport_truck = "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy";                         // Kamaz Transport (Covered)
+opfor_ammobox_transport = "rhsusf_M977A4_BKIT_M2_usarmy_d";                     // Kamaz Transport (Open) -> Has to be able to transport resource crates!
+opfor_fuel_truck = "UK3CB_BAF_MAN_HX60_Fuel_Sands";                                 // Kamaz Fuel
+opfor_ammo_truck = "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d";                                 // Kamz Ammo
+opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Pod
+opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Pod
+opfor_flag = "Flag_CSAT_F";                                              // Flag
 
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
@@ -45,142 +45,70 @@ Think of them like garrison or military police forces, which are more meant to c
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 militia_squad = [
-    "UK3CB_AAF_O_RIF_1",
-    "UK3CB_AAF_O_RIF_1",
-    "UK3CB_AAF_O_RIF_1",
-    "UK3CB_AAF_O_MG",
-    "UK3CB_AAF_O_MG",
-    "UK3CB_AAF_O_AT",
-    "UK3CB_AAF_O_AT",
-    "UK3CB_AAF_O_GL",
-  	"UK3CB_AAF_O_GL",
-  	"UK3CB_AAF_O_MK",
-  	"UK3CB_AAF_O_MK",
-    "UK3CB_AAF_O_AA"
+    "O_Soldier_F",
+    "O_Soldier_AR_F",
+    "O_Soldier_LAT_F",
+    "O_Soldier_AA_F",
+    "O_Soldier_F",
+    "O_Soldier_AR_F",
+    "O_Soldier_LAT_F",
+    "O_Soldier_F",
+  	"O_Soldier_AR_F",
+  	"O_Soldier_LAT_F",
+  	"O_Soldier_F",
+    "O_Soldier_F"
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 
 militia_vehicles = [
-    "UK3CB_AAF_O_Pickup_DSHKM",
-  	"UK3CB_AAF_O_Tigr_STS",
-  	"UK3CB_AAF_O_LR_SPG9",
-  	"UK3CB_AAF_O_LR_SF_M2"
+	"rhsusf_m1025_d_m2",
+    "rhsusf_M1117_D"
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
-    "UK3CB_AAF_O_BTR80a",
-  	"UK3CB_AAF_O_BTR80a",
-  	"UK3CB_AAF_O_BTR80a",
-  	"UK3CB_AAF_O_BTR80a",
-  	"UK3CB_AAF_O_BTR80a",
-    "UK3CB_AAF_O_BMP2K",
-  	"UK3CB_AAF_O_BMP2K",
-    "UK3CB_AAF_O_BMP2K",
-    "UK3CB_AAF_O_BMP2K",
-    "UK3CB_AAF_O_T72A",
-    "UK3CB_AAF_O_T72A",
-    "UK3CB_AAF_O_T72A",
-	"UK3CB_AAF_O_2S6M_Tunguska",
-	"UK3CB_AAF_O_2S6M_Tunguska",
-	"UK3CB_AAF_O_2S6M_Tunguska",
-    "UK3CB_AAF_O_T72BC",
-    "UK3CB_AAF_O_T72BC",
-  	"UK3CB_AAF_O_2S3",
-	"UK3CB_AAF_O_ZsuTank"
+	"rhsusf_m1025_d_m2",
+	"rhsusf_M1117_D",
+	"rhs_t72bb_tv",
+	"rhs_zsu234_aa"
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"UK3CB_AAF_O_BRDM2",
-	"UK3CB_AAF_O_Tigr_STS",
-	"UK3CB_AAF_O_GAZ_Vodnik_Cannon",
-	"UK3CB_AAF_O_GAZ_Vodnik_KVPT",
-	"UK3CB_AAF_O_GAZ_Vodnik_PKT",
-	"UK3CB_AAF_O_LR_AGS30",
-	"UK3CB_AAF_O_LR_M2",
-	"UK3CB_AAF_O_LR_SPG9",
-	"UK3CB_AAF_O_LR_SF_AGS30",
-	"UK3CB_AAF_O_LR_SF_M2",
-	"UK3CB_AAF_O_Pickup_DSHKM",
-	"UK3CB_AAF_O_UAZ_SPG9",
-	"UK3CB_AAF_O_UAZ_MG"
+	"rhsusf_m1025_d_m2",
+	"rhsusf_M1117_D"
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
-	"UK3CB_AAF_O_BTR80a",
-	"UK3CB_AAF_O_BTR80a",
-	"UK3CB_AAF_O_T72A",
-	"UK3CB_AAF_O_T72BC",
-	"UK3CB_AAF_O_BMP2K",
-	"UK3CB_AAF_O_BMP2K",
-	"UK3CB_AAF_O_2S6M_Tunguska",
-	"UK3CB_AAF_O_2S6M_Tunguska",
-	"UK3CB_AAF_O_Mi_24P",
-	"UK3CB_AAF_O_Mi_24V",
-	"UK3CB_AAF_O_Mi8AMTSh"
+	"rhsusf_m1025_d_m2",
+	"rhsusf_M1117_D",
+	"rhs_t72bb_tv",
+	"rhs_zsu234_aa"
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-	"UK3CB_AAF_O_BRDM2",
-	"UK3CB_AAF_O_Tigr_STS",
-	"UK3CB_AAF_O_GAZ_Vodnik_Cannon",
-	"UK3CB_AAF_O_GAZ_Vodnik_KVPT",
-	"UK3CB_AAF_O_Pickup_DSHKM",
-	"UK3CB_AAF_O_Kamaz_Open",
-	"UK3CB_AAF_O_Ural_Open",
-	"UK3CB_AAF_O_LR_SF_M2",
-	"UK3CB_AAF_O_LR_SF_AGS30",
-	"UK3CB_AAF_O_Pickup_M2",
-	"UK3CB_AAF_O_GAZ_Vodnik_PKT",
-	"UK3CB_AAF_O_Offroad_M2",
-	"UK3CB_AAF_O_UAZ_SPG9",
-	"UK3CB_AAF_O_LR_SPG9",
-	"UK3CB_AAF_O_Mi8"
+	"rhsusf_m1025_d_m2",
+	"rhsusf_M1117_D"
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 opfor_troup_transports = [
-	"UK3CB_AAF_O_Mi_24P",
-	"UK3CB_AAF_O_Mi_24V",
-	"UK3CB_AAF_O_Mi8AMTSh",
-	"UK3CB_AAF_O_Kamaz_Open",
-	"UK3CB_AAF_O_Ural_Open",
-	"UK3CB_AAF_O_Ural_Open",
-	"UK3CB_AAF_O_BRDM2",
-	"UK3CB_AAF_O_Mi8"
+	"rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy",
+	"RHS_Mi8MTV3_heavy_vdv"
 ];
 
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
-	"UK3CB_AAF_O_Mi_24P",
-	"UK3CB_AAF_O_Mi_24V",
-	"UK3CB_AAF_O_Mi8AMTSh",
-	"UK3CB_AAF_O_Mi8"
+	"RHS_Mi8MTV3_heavy_vdv"
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
-	"UK3CB_AAF_O_SF_SL",
-	"UK3CB_AAF_O_SF_AR",
-	"UK3CB_AAF_O_SF_MD",
-	"UK3CB_AAF_O_SF_LAT",
-	"UK3CB_AAF_O_SF_RIF_1",
-	"UK3CB_AAF_O_SF_TL",
-	"UK3CB_AAF_O_SF_DEM",
-	"UK3CB_AAF_O_SF_MK",
-	"UK3CB_AAF_O_L39_AA",
-	"UK3CB_AAF_O_L39_CAS",
-	"UK3CB_AAF_O_MIG29S",
-	"UK3CB_AAF_O_MIG29SM",
-	"UK3CB_AAF_O_Su25SM",
-	"UK3CB_AAF_O_Su25SM_CAS",
-	"UK3CB_AAF_O_Su25SM_Cluster",
-	"UK3CB_AAF_O_Su25SM_KH29",
-	"UK3CB_AAF_O_Cessna_T41_Armed"
+	"RHS_Su25SM_vvs",
+	"rhs_mig29sm_vvs"
 ];
