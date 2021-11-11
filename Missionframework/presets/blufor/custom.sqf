@@ -70,8 +70,7 @@ light_vehicles = [
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",200,100,200],
 	["rhsusf_M977A4_BKIT_M2_usarmy_d",200,100,200],
 	
-    ["UK3CB_BAF_LandRover_Soft_FFR_Green_B_DPMW",100,0,100],
-    ["UK3CB_BAF_LandRover_Soft_FFR_Sand_A_MTP_RM",100,0,100],
+    ["rhsusf_mrzr4_d",100,0,100],
     ["rhsusf_m1151_usmc_wd",150,0,150],
     ["rhsusf_m1151_usmc_d",150,0,150],
     ["BWA3_Eagle_Fleck",150,0,150],
@@ -84,7 +83,8 @@ light_vehicles = [
     ["UK3CB_BAF_Coyote_Passenger_L111A1_D_MTP",170,150,170],
     ["UK3CB_BAF_Panther_GPMG_Green_A_DPMW",170,170,170],
     ["UK3CB_BAF_Panther_GPMG_Sand_A_MTP",170,170,170],
-    ["rhsusf_m1045_w_s",150,500,150],
+    ["rhsusf_m966_w",150,500,150],
+    ["rhsusf_m966_d",150,500,150],
 	
     ["rhsusf_M1237_M2_usarmy_wd",350,100,350],
     ["rhsusf_M1237_M2_usarmy_d",350,100,350],
@@ -104,8 +104,6 @@ heavy_vehicles = [
     ["I_LT_01_AA_F",450,900,450],
 	
     ["rhs_bmp2d_msv",900,1200,900],
-    ["UK3CB_BAF_Warrior_A3_W_Cage_Camo_MTP",1200,900,1200],
-    ["UK3CB_BAF_Warrior_A3_D_Cage_Camo_MTP",1200,900,1200],
     ["BWA3_Puma_Fleck",1200,1500,1200],
     ["BWA3_Puma_Tropen",1200,1500,1200],
     ["RHS_M2A3_wd",1200,1200,1200],
@@ -131,7 +129,7 @@ air_vehicles = [
     ["RHS_MELB_MH6M",500,0,500],
     ["rhs_ka60_grey",500,0,500],
     ["RHS_UH1Y_UNARMED",600,0,600],
-    ["RHS_Mi8AMT_vdv",600,0,600],
+    ["RHS_Mi8AMT_vvs",600,0,600],
 	
     ["RHS_MELB_AH6M",600,1000,600],
     ["RHS_UH1Y",600,1000,600],
@@ -143,9 +141,9 @@ air_vehicles = [
 	
     ["UK3CB_BAF_Wildcat_AH1_CAS_6C_DPMW_RM",1200,1600,1200],
     ["RHS_UH60M_ESSS",1600,2000,1600],
-    ["RHS_Mi8MTV3_heavy_vdv",1400,1600,1400],
+    ["RHS_Mi8MTV3_heavy_vvs",1400,1600,1400],
 	
-    ["RHS_Mi24P_vdv",2400,1600,2400],
+    ["rhsgref_mi24g_CAS",2400,1600,2400],
     ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
     ["RHS_AH1Z_wd",2000,2300,2000],
     ["RHS_AH64D_wd",2000,2600,2000],
