@@ -28,7 +28,7 @@ opfor_paratrooper = "O_soldier_PG_F";                                   // Parat
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "rhsusf_M1117_D";                                             // M-ATV
 opfor_mrap_armed = "rhsusf_M1117_D";                                   // MATV (HMG)
-opfor_transport_helo = "UK3CB_AAF_O_Mi8";                         // Merlin
+opfor_transport_helo = "rhsgref_cdf_b_reg_Mi8amt";                         // Merlin
 opfor_transport_truck = "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy";                         // Kamaz Transport (Covered)
 opfor_ammobox_transport = "rhsusf_M977A4_BKIT_M2_usarmy_d";                     // Kamaz Transport (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "UK3CB_BAF_MAN_HX60_Fuel_Sands";                                 // Kamaz Fuel
