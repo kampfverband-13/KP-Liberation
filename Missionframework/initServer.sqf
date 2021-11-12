@@ -247,10 +247,10 @@ hs_spawn = compileFinal "
 			if (_too_close == false) then {
 				_group_spawn = createGroup opfor;
 				
-				'O_Soldier_F' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
-				'O_Soldier_AR_F' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
-				'O_Soldier_LAT_F' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
-				'O_Soldier_AA_F' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
+				'LOP_AA_Infantry_Rifleman' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
+				'LOP_AA_Infantry_MG_2' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
+				'LOP_AA_Infantry_AT' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
+				'LOP_IRAN_Infantry_AA' createUnit [_spawn_position, _group_spawn, '', 0.2, 'private']; sleep 1;
 
 				_wp1_spawn = _group_spawn addWaypoint [getPos _player, 100];
 				_wp1_spawn setwaypointtype 'MOVE';
