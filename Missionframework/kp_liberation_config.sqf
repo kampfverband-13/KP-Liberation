@@ -212,7 +212,7 @@ KP_liberation_production_interval = 90;                                 // Time 
 GRLIB_sector_size = 700;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.3;                                  // Multiplier for defenders in buildings.
-GRLIB_battlegroup_size = 8;                                             // Size of enemy battlegroups.
+GRLIB_battlegroup_size = 6;                                             // Size of enemy battlegroups.
 GRLIB_vulnerability_timer = 900;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
 GRLIB_radiotower_size = 1500;                                           // Radio Tower scanning range.
 GRLIB_surrender_chance = 50;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
@@ -373,25 +373,14 @@ blacklisted_from_arsenal = [
 	"BWA3_insignia_18_oberstleutnant",
 	"BWA3_insignia_19_oberst",
 	"srifle_GM6_camo_F",
-	"arifle_Katiba_F",
-	"arifle_Katiba_GL_F",
-	"arifle_Katiba_C_F",
-	"30Rnd_65x39_caseless_green",
-	"30Rnd_65x39_caseless_green_mag_Tracer",
-	"ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
 	"srifle_GM6_ghex_F",
 	"arifle_MX_GL_khk_F",
 	"arifle_MX_khk_F",
 	"arifle_MX_SW_khk_F",
 	"arifle_MXC_khk_F",
 	"arifle_MXM_khk_F",
-	"srifle_DMR_07_blk_F",
 	"srifle_DMR_07_ghex_F",
 	"srifle_DMR_07_hex_F",
-	"ACE_10Rnd_580x42_DBP88_Mag",
-	"ACE_20Rnd_65_Creedmor_mag",
-	"ACE_20Rnd_65x47_Scenar_mag",
-	"20Rnd_650x39_Cased_Mag_F",
 	"arifle_CTAR_ghex_F",
 	"arifle_CTAR_hex_F",
 	"arifle_CTAR_GL_ghex_F",
@@ -499,13 +488,6 @@ blacklisted_from_arsenal = [
 	"SMG_03C_TR_hex",
 	"SMG_03_hex",
 	"SMG_03_TR_hex",
-	"arifle_CTAR_blk_F",
-	"arifle_CTAR_GL_blk_F",
-	"arifle_CTARS_blk_F",
-	"100Rnd_580x42_Mag_F",
-	"100Rnd_580x42_Mag_Tracer_F",
-	"30Rnd_580x42_Mag_F",
-	"30Rnd_580x42_Mag_Tracer_F",
 	"V_CSAT",
 	"V_CSAT_R",
 	"U_O_T_Sniper_F",
