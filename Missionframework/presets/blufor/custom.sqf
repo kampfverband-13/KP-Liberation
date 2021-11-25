@@ -66,16 +66,16 @@ light_vehicles = [
     ["B_Boat_Armed_01_minigun_F",150,150,150],
 	["rhsusf_mkvsoc",150,150,150],
 	
-    ["rhs_kamaz5350_open_msv",100,0,100],
-	["rhsusf_M977A4_BKIT_M2_usarmy_wd",200,100,200],
-	["rhsusf_M977A4_BKIT_M2_usarmy_d",200,100,200],
-	
+    ["rhs_kamaz5350_open_msv",100,0,100],	
     ["rhsusf_mrzr4_d",100,0,100],
     ["rhsusf_m1151_usmc_wd",150,0,150],
     ["rhsusf_m1151_usmc_d",150,0,150],
     ["BWA3_Eagle_Fleck",150,0,150],
     ["BWA3_Eagle_Tropen",150,0,150],
+    ["rhs_uaz_open_MSV_01",100,0,100],
     ["rhs_tigr_3camo_msv",170,0,170],
+    ["UK3CB_BAF_LandRover_Soft_FFR_Green_A_MTP",100,0,100],
+    ["UK3CB_BAF_LandRover_Soft_FFR_Sand_A_MTP",100,0,100],
 	
     ["UK3CB_BAF_Husky_Passenger_HMG_Green_DPMW",170,120,170],
     ["UK3CB_BAF_Husky_Passenger_HMG_Sand_MTP",170,120,170],
@@ -99,6 +99,8 @@ heavy_vehicles = [
     ["UK3CB_BAF_FV432_Mk3_RWS_Sand_MTP",450,100,450],
     ["rhsusf_stryker_m1126_m2_wd",600,250,600],
 	["rhsusf_stryker_m1134_wd",600,900,600],
+    ["rhsusf_m113_usarmy",400,100,400],
+	["rhsusf_m113d_usarmy",400,100,400],
     ["I_LT_01_cannon_F",450,500,450],
     ["I_LT_01_AT_F",450,900,450],
     ["I_LT_01_AA_F",450,900,450],
@@ -108,6 +110,9 @@ heavy_vehicles = [
     ["BWA3_Puma_Tropen",1200,1500,1200],
     ["RHS_M2A3_wd",1200,1200,1200],
     ["RHS_M2A3",1200,1200,1200],
+    ["UK3CB_BAF_Warrior_A3_W_Cage_Camo_MTP",1200,1000,1200],
+    ["UK3CB_BAF_Warrior_A3_D_Cage_Camo_MTP",1200,1000,1200],
+    
     ["rhs_zsu234_aa",900,1100,900],
     ["RHS_M6_wd",1200,1100,1100],
     ["RHS_M6",1200,1100,1100],
@@ -147,6 +152,8 @@ air_vehicles = [
     ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
     ["RHS_AH1Z_wd",2000,2300,2000],
     ["RHS_AH64D_wd",2000,2600,2000],
+    ["rhs_mi28n_vvs",2200,2400,2200],
+    ["RHS_Ka52_vvs",2200,2400,2600],
 	
     ["RHS_C130J",2000,0,2000],
 	
@@ -161,7 +168,7 @@ air_vehicles = [
 
 
 static_vehicles = [
-    ["BWA3_MRS120_Fleck",150,400,0]
+    ["BWA3_MRS120_Fleck",150,0,0]
 ];
 
 
@@ -216,6 +223,8 @@ support_vehicles = [
     ["rhsusf_M978A4_usarmy_d",150,0,300],
     ["rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy",100,0,100],
     ["rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy",100,0,100],
+    ["rhsusf_M977A4_BKIT_M2_usarmy_wd",200,100,200],
+	["rhsusf_M977A4_BKIT_M2_usarmy_d",200,100,200],
 	["Box_NATO_Equip_F",0,0,0],
     ["ACE_medicalSupplyCrate_advanced",0,0,0],
     ["ACE_Track",0,0,0],
